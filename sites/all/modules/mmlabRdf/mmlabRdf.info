@@ -1,0 +1,3 @@
+name = mmlabRdf
+core = 7.x
+description = extract our data to RDF graphs
