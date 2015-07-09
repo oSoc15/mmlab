@@ -6,12 +6,12 @@
  */
 
 /* Hook called on every request
- * This will check if the user requests a ttl or jsonld file, if so the module will kick in and try to get the right format
+ * This will check if the user requests an rdf file, if so the module will kick in and try to get the right format
  */
 function mmlabRdf_init(){
     $path = parse_url(current_path());
     $path = $path['path'];
-    if(preg_match('/\.ttl|\.jsonld/i',$path)){
+    if(preg_match('/\.ttl|\.jsonld|\.rdf|\.nt|\.n3/i',$path)){
        mmlabRdf_getRdf($path);
     }
 }
@@ -23,7 +23,9 @@ function mmlabRdf_getRdf($path){
     if (easyrdf()) {
         $graph = new EasyRdf_Graph($uri);
         $graph->load($uri,'guess');
-        echo $graph->serialise($format);
+        $content_type = EasyRdf_Format::getFormat($format);
+        header('Content-type :'. $content_type->getDefaultMimeType());
+        print $graph->serialise($format);
     }else{
         echo 'easyrdf not working';
     }
@@ -37,6 +39,12 @@ function getFormat($path){
         case 'ttl':return 'turtle';
         break;
         case 'jsonld': return 'json';
+        break;
+        case 'rdf': return 'rdfxml';
+        break;
+        case 'nt': return 'ntriples';
+        break;
+        case 'n3': return 'n3';
         break;
     }
 }
