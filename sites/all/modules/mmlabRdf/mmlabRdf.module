@@ -18,6 +18,7 @@ function mmlabRdf_init(){
 
 function mmlabRdf_getRdf($path){
     $suffix = explode('.',$path)[0];
+
     $uri = 'http://' . $_SERVER['HTTP_HOST'] . base_path() . '?q=' . $suffix;
     $format = getFormat($path);
     if (easyrdf()) {
@@ -26,11 +27,11 @@ function mmlabRdf_getRdf($path){
         $content_type = EasyRdf_Format::getFormat($format);
         header('Content-type :'. $content_type->getDefaultMimeType());
         print $graph->serialise($format);
+        //stop rendering html output
+        die;
     }else{
-        echo 'easyrdf not working';
+        drupal_set_message('easyRDF API is not installed correctly');
     }
-    //stop rendering the html output
-    die;
 }
 
 function getFormat($path){
@@ -48,3 +49,8 @@ function getFormat($path){
         break;
     }
 }
+
+
+
+//create custom page which renders rdf data,
+
