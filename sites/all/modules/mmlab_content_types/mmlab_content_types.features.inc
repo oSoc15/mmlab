@@ -5,81 +5,52 @@
  */
 
 /**
+ * Implements hook_node_info().
+ */
+function mmlab_content_types_node_info() {
+  $items = array(
+    'person' => array(
+      'name' => t('Person'),
+      'base' => 'node_content',
+      'description' => t('A person working at MMLab'),
+      'has_title' => '1',
+      'title_label' => t('Full name'),
+      'help' => '',
+    ),
+    'project' => array(
+      'name' => t('Project'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'research_topic' => array(
+      'name' => t('Research topic'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Topic Title'),
+      'help' => '',
+    ),
+    'team' => array(
+      'name' => t('Team'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+  );
+  drupal_alter('node_info', $items);
+  return $items;
+}
+
+/**
  * Implements hook_rdf_default_mappings().
  */
 function mmlab_content_types_rdf_default_mappings() {
   $schemaorg = array();
-
-  // Exported RDF mapping: homepage
-  $schemaorg['node']['homepage'] = array(
-    'rdftype' => array(
-      0 => 'sioc:Item',
-      1 => 'foaf:Document',
-    ),
-    'created' => array(
-      'predicates' => array(
-        0 => 'dc:date',
-        1 => 'dc:created',
-      ),
-      'datatype' => 'xsd:dateTime',
-      'callback' => 'date_iso8601',
-    ),
-    'changed' => array(
-      'predicates' => array(
-        0 => 'dc:modified',
-      ),
-      'datatype' => 'xsd:dateTime',
-      'callback' => 'date_iso8601',
-    ),
-    'body' => array(
-      'predicates' => array(
-        0 => 'content:encoded',
-      ),
-    ),
-    'uid' => array(
-      'predicates' => array(
-        0 => 'sioc:has_creator',
-      ),
-      'type' => 'rel',
-    ),
-    'name' => array(
-      'predicates' => array(
-        0 => 'schema:name',
-      ),
-    ),
-    'comment_count' => array(
-      'predicates' => array(
-        0 => 'sioc:num_replies',
-      ),
-      'datatype' => 'xsd:integer',
-    ),
-    'last_activity' => array(
-      'predicates' => array(
-        0 => 'sioc:last_activity_date',
-      ),
-      'datatype' => 'xsd:dateTime',
-      'callback' => 'date_iso8601',
-    ),
-    'title' => array(
-      'predicates' => array(
-        0 => 'schema:name',
-      ),
-    ),
-    'field_url' => array(
-      'type' => 'property',
-      'datatype' => 'rdfs:Literal',
-      'predicates' => array(
-        0 => 'schema:homepage',
-        1 => 'foaf:homepage',
-      ),
-    ),
-    'url' => array(
-      'predicates' => array(
-        0 => 'schema:url',
-      ),
-      'type' => 'rel',
-    ),
-  );
 
   // Exported RDF mapping: person
   $schemaorg['node']['person'] = array(
