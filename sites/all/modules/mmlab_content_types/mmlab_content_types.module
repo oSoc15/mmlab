@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the MMLab content types feature.
+ */
+
+include_once 'mmlab_content_types.features.inc';
