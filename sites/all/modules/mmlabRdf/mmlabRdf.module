@@ -1,4 +1,6 @@
 <?php
+
+include_once 'vendor/autoload.php';
 /**
  *
  * Author: Dieter Beelaert
@@ -14,13 +16,17 @@ function mmlabRdf_init(){
     if(preg_match('/\.ttl|\.jsonld|\.rdf|\.nt|\.n3/i',$path)){
        mmlabRdf_getRdf($path);
     }
+
+    if(contentNegotiationRequested()){
+        doContentNegotiation($path);
+    }
 }
 
-function mmlabRdf_getRdf($path){
+function mmlabRdf_getRdf($path, $format = ''){
     $suffix = explode('.',$path)[0];
 
     $uri = 'http://' . $_SERVER['HTTP_HOST'] . base_path() . '?q=' . $suffix;
-    $format = getFormat($path);
+    $format = $format == '' ? getFormat($path) : $format;
     if (easyrdf()) {
         $graph = new EasyRdf_Graph($uri);
         $graph->load($uri,'guess');
@@ -34,9 +40,13 @@ function mmlabRdf_getRdf($path){
     }
 }
 
-function getFormat($path){
-    $split = explode('.',$path);
-    switch($split[1]){
+function getFormat($path, $value =''){
+    if($value == ''){
+        $split = explode('.',$path);
+        $value = $split[1];
+    }
+
+    switch($value){
         case 'ttl':return 'turtle';
         break;
         case 'jsonld': return 'json';
@@ -50,7 +60,33 @@ function getFormat($path){
     }
 }
 
+function contentNegotiationRequested(){
+    $accept = getallheaders()['Accept'];
+    return preg_match('/rdf|n\-triples|turtle|n3|jsonld/i',$accept);
+}
 
+function doContentNegotiation($path){
+    $supported = array(
+        'html',
+        'application/rdf+xml',
+        'application/turtle',
+        'application/n-triples',
+        'application/n3',
+        'application/jsonld',
+        'text/rdf+xml',
+        'text/turtle',
+        'text/n3',
+        'text/jsonld',
+        'text/html'
+    );
 
-//create custom page which renders rdf data,
+    $negotiator = new \Negotiation\FormatNegotiator();
+    $accept = $negotiator->getBest(getallheaders()['Accept'],$supported);
+    if($accept != null) {
+        $format = $accept->getValue();
+        $format = preg_replace('/application|\/|\+xml|text/i', '', $format);
+        //mmlabRdf_getRdf($path, getFormat($format));
+    }
+}
+
 
