@@ -1,6 +1,6 @@
 <?php
 
-include_once 'vendor/autoload.php';
+include_once DRUPAL_ROOT.'/sites/all/libraries/composer/autoload.php';
 /**
  *
  * Author: Dieter Beelaert
