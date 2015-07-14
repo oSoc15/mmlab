@@ -1,0 +1,15 @@
+name = Multimedia Lab
+description = Omega-based theme for the MMLab website.
+base theme = omega
+screenshot = screenshot.png
+engine = phptemplate
+core = 7.x
+
+; Styles
+stylesheets[all][] = css/multimedialab.normalize.css
+stylesheets[all][] = css/multimedialab.hacks.css
+stylesheets[all][] = css/multimedialab.styles.css
+stylesheets[all][] = css/multimedialab.no-query.css
+
+; Scripts
+scripts[] = js/multimedialab.behaviors.js
