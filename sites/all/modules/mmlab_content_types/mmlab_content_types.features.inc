@@ -9,6 +9,38 @@
  */
 function mmlab_content_types_node_info() {
   $items = array(
+    'event' => array(
+      'name' => t('Event'),
+      'base' => 'node_content',
+      'description' => t('Content type for creating one event (conference & other)'),
+      'has_title' => '1',
+      'title_label' => t('Event name'),
+      'help' => '',
+    ),
+    'events' => array(
+      'name' => t('Events'),
+      'base' => 'node_content',
+      'description' => t('Content type for events the lab is involved in.'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'partner' => array(
+      'name' => t('Partner'),
+      'base' => 'node_content',
+      'description' => t('Content type for adding a partner'),
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'help' => '',
+    ),
+    'partners' => array(
+      'name' => t('Partners'),
+      'base' => 'node_content',
+      'description' => t('Content type for partners'),
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'person' => array(
       'name' => t('Person'),
       'base' => 'node_content',
@@ -21,6 +53,14 @@ function mmlab_content_types_node_info() {
       'name' => t('Project'),
       'base' => 'node_content',
       'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
+    'publications' => array(
+      'name' => t('Publications'),
+      'base' => 'node_content',
+      'description' => t('Content type for publications'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
