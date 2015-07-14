@@ -94,10 +94,6 @@ function doContentNegotiation($path){
         $format = getFormat($path,$format);
         if($format != 'html') {
             mmlabRdf_getRdf($path, $format);
-        }else{
-            echo 'html';
         }
     }
 }
-
-
