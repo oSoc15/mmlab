@@ -1,0 +1,43 @@
+<?php
+/**
+ *
+ * Author: Dieter Beelaert
+ *
+ */
+
+/* Hook called on every request
+ * This will check if the user requests a ttl or jsonld file, if so the module will kick in and try to get the right format
+ */
+function mmlabRdf_init(){
+echo 'mmlab init';
+    $path = parse_url(current_path());
+    $path = $path['path'];
+    if(preg_match('/\.ttl|\.jsonld/i',$path)){
+       mmlabRdf_getRdf($path);
+    }
+}
+
+function mmlabRdf_getRdf($path){
+    $suffix = explode('.',$path)[0];
+    $uri = 'http://' . $_SERVER['HTTP_HOST'] . base_path() . '?q=' . $suffix;
+    $format = getFormat($path);
+    if (easyrdf()) {
+        $graph = new EasyRdf_Graph($uri);
+        $graph->load($uri,'guess');
+        echo $graph->serialise($format);
+    }else{
+        echo 'easyrdf not working';
+    }
+    //stop rendering the html output
+    die;
+}
+
+function getFormat($path){
+    $split = explode('.',$path);
+    switch($split[1]){
+        case 'ttl':return 'turtle';
+        break;
+        case 'jsonld': return 'json';
+        break;
+    }
+}
