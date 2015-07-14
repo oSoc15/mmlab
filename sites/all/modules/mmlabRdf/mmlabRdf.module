@@ -45,9 +45,7 @@ function mmlabRdf_getRdf($path, $format = '')
 }
 
 function getFormat($path, $value =''){
-    error_log('getting format for path: ' . $path . ' or value: ' . $value);
     if($value == ''){
-        error_log('explode');
         $split = explode('.',$path);
         $value = $split[1];
     }
