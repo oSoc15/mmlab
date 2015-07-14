@@ -22,26 +22,32 @@ function mmlabRdf_init(){
     }
 }
 
-function mmlabRdf_getRdf($path, $format = ''){
-    $suffix = explode('.',$path)[0];
-
-    $uri = 'http://' . $_SERVER['HTTP_HOST'] . base_path() . '?q=' . $suffix;
-    $format = $format == '' ? getFormat($path) : $format;
-    if (easyrdf()) {
-        $graph = new EasyRdf_Graph($uri);
-        $graph->load($uri,'guess');
-        $content_type = EasyRdf_Format::getFormat($format);
-        header('Content-type :'. $content_type->getDefaultMimeType());
-        print $graph->serialise($format);
-        //stop rendering html output
-        die;
-    }else{
-        drupal_set_message('easyRDF API is not installed correctly');
+function mmlabRdf_getRdf($path, $format = '')
+{
+    if (!isset($_GET['requestedMyself'])) { //prevent infinite loop of requests
+        $suffix = explode('.', $path)[0];
+        $uri = 'http://' . $_SERVER['HTTP_HOST'] . base_path() . '?q=' . $suffix . '&requestedMyself=true';
+        $format = $format == '' ? getFormat($path) : $format;
+        if($format != null) {
+            if (easyrdf()) {
+                $graph = new EasyRdf_Graph($uri);
+                $graph->load($uri, 'guess');
+                $content_type = EasyRdf_Format::getFormat($format);
+                header('Content-type :' . $content_type->getDefaultMimeType());
+                print $graph->serialise($format);
+                //stop rendering html output
+                die;
+            } else {
+                drupal_set_message('easyRDF API is not installed correctly');
+            }
+        }
     }
 }
 
 function getFormat($path, $value =''){
+    error_log('getting format for path: ' . $path . ' or value: ' . $value);
     if($value == ''){
+        error_log('explode');
         $split = explode('.',$path);
         $value = $split[1];
     }
@@ -56,6 +62,8 @@ function getFormat($path, $value =''){
         case 'nt': return 'ntriples';
         break;
         case 'n3': return 'n3';
+        break;
+        default: return null;
         break;
     }
 }
@@ -85,7 +93,12 @@ function doContentNegotiation($path){
     if($accept != null) {
         $format = $accept->getValue();
         $format = preg_replace('/application|\/|\+xml|text/i', '', $format);
-        //mmlabRdf_getRdf($path, getFormat($format));
+        $format = getFormat($path,$format);
+        if($format != 'html') {
+            mmlabRdf_getRdf($path, $format);
+        }else{
+            echo 'html';
+        }
     }
 }
 
