@@ -12,15 +12,7 @@ function mmlab_content_types_node_info() {
     'event' => array(
       'name' => t('Event'),
       'base' => 'node_content',
-      'description' => t('Content type for creating one event (conference & other)'),
-      'has_title' => '1',
-      'title_label' => t('Event name'),
-      'help' => '',
-    ),
-    'events' => array(
-      'name' => t('Events'),
-      'base' => 'node_content',
-      'description' => t('Content type for events the lab is involved in.'),
+      'description' => t('An event organised by MMLab'),
       'has_title' => '1',
       'title_label' => t('Title'),
       'help' => '',
@@ -31,14 +23,6 @@ function mmlab_content_types_node_info() {
       'description' => t('Content type for adding a partner'),
       'has_title' => '1',
       'title_label' => t('Name'),
-      'help' => '',
-    ),
-    'partners' => array(
-      'name' => t('Partners'),
-      'base' => 'node_content',
-      'description' => t('Content type for partners'),
-      'has_title' => '1',
-      'title_label' => t('Title'),
       'help' => '',
     ),
     'person' => array(
@@ -58,7 +42,7 @@ function mmlab_content_types_node_info() {
       'help' => '',
     ),
     'publications' => array(
-      'name' => t('Publications'),
+      'name' => t('Publication'),
       'base' => 'node_content',
       'description' => t('Content type for publications'),
       'has_title' => '1',
@@ -255,8 +239,10 @@ function mmlab_content_types_rdf_default_mappings() {
   // Exported RDF mapping: project
   $schemaorg['node']['project'] = array(
     'rdftype' => array(
-      0 => 'sioc:Item',
-      1 => 'foaf:Document',
+      0 => 'schema:Project',
+      1 => 'sioc:Item',
+      2 => 'foaf:Document',
+      3 => 'foaf:Project',
     ),
     'created' => array(
       'predicates' => array(
@@ -309,6 +295,7 @@ function mmlab_content_types_rdf_default_mappings() {
       'predicates' => array(
         0 => 'schema:name',
       ),
+      'type' => 'property',
     ),
     'url' => array(
       'predicates' => array(
@@ -348,6 +335,13 @@ function mmlab_content_types_rdf_default_mappings() {
     ),
     'field_partners_involved' => array(
       'predicates' => array(),
+    ),
+    'field_partners' => array(
+      'type' => 'property',
+      'predicates' => array(
+        0 => 'schema:partner',
+        1 => 'foaf:partner',
+      ),
     ),
   );
 
