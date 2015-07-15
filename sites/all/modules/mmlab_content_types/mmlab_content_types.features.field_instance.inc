@@ -57,12 +57,13 @@ function mmlab_content_types_field_default_field_instances() {
   // Exported field_instance: 'node-event-field_date'
   $field_instances['node-event-field_date'] = array(
     'bundle' => 'event',
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'date',
+        'module' => NULL,
         'settings' => array(
           'format_type' => 'long',
           'fromto' => 'both',
@@ -70,7 +71,7 @@ function mmlab_content_types_field_default_field_instances() {
           'multiple_number' => '',
           'multiple_to' => '',
         ),
-        'type' => 'date_default',
+        'type' => NULL,
         'weight' => 1,
       ),
       'teaser' => array(
@@ -93,7 +94,7 @@ function mmlab_content_types_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'date',
+      'module' => NULL,
       'settings' => array(
         'increment' => 15,
         'input_format' => 'm/d/Y - H:i:s',
@@ -102,7 +103,7 @@ function mmlab_content_types_field_default_field_instances() {
         'text_parts' => array(),
         'year_range' => '-3:+3',
       ),
-      'type' => 'date_text',
+      'type' => NULL,
       'weight' => -3,
     ),
   );
@@ -955,94 +956,6 @@ function mmlab_content_types_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-team-body'
-  $field_instances['node-team-body'] = array(
-    'bundle' => 'team',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
-    'settings' => array(
-      'display_summary' => TRUE,
-      'text_processing' => 1,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
-      ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
-    ),
-  );
-
-  // Exported field_instance: 'node-team-field_member'
-  $field_instances['node-team-field_member'] = array(
-    'bundle' => 'team',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => TRUE,
-          'view_mode' => 'default',
-        ),
-        'type' => 'entityreference_entity_view',
-        'weight' => 1,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_member',
-    'label' => 'Member',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => -3,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('About');
@@ -1058,7 +971,6 @@ function mmlab_content_types_field_default_field_instances() {
   t('Last name');
   t('Link to the demo ');
   t('Logo');
-  t('Member');
   t('Partners');
   t('People involved');
   t('Phone');

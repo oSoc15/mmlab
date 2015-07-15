@@ -57,14 +57,6 @@ function mmlab_content_types_node_info() {
       'title_label' => t('Topic Title'),
       'help' => '',
     ),
-    'team' => array(
-      'name' => t('Team'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
   );
   drupal_alter('node_info', $items);
   return $items;
@@ -426,83 +418,6 @@ function mmlab_content_types_rdf_default_mappings() {
       'predicates' => array(
         0 => 'schema:publications',
         1 => 'foaf:publications',
-      ),
-    ),
-  );
-
-  // Exported RDF mapping: team
-  $schemaorg['node']['team'] = array(
-    'rdftype' => array(
-      0 => 'foaf:Team',
-    ),
-    'created' => array(
-      'predicates' => array(
-        0 => 'dc:date',
-        1 => 'dc:created',
-      ),
-      'datatype' => 'xsd:dateTime',
-      'callback' => 'date_iso8601',
-    ),
-    'changed' => array(
-      'predicates' => array(
-        0 => 'dc:modified',
-      ),
-      'datatype' => 'xsd:dateTime',
-      'callback' => 'date_iso8601',
-    ),
-    'body' => array(
-      'predicates' => array(
-        0 => 'content:encoded',
-      ),
-      'type' => 'property',
-    ),
-    'uid' => array(
-      'predicates' => array(
-        0 => 'sioc:has_creator',
-      ),
-      'type' => 'rel',
-    ),
-    'name' => array(
-      'predicates' => array(
-        0 => 'schema:name',
-      ),
-    ),
-    'comment_count' => array(
-      'predicates' => array(
-        0 => 'sioc:num_replies',
-      ),
-      'datatype' => 'xsd:integer',
-    ),
-    'last_activity' => array(
-      'predicates' => array(
-        0 => 'sioc:last_activity_date',
-      ),
-      'datatype' => 'xsd:dateTime',
-      'callback' => 'date_iso8601',
-    ),
-    'field_persons' => array(
-      'predicates' => array(
-        0 => 'schema:accountablePerson',
-      ),
-      'type' => 'property',
-    ),
-    'url' => array(
-      'predicates' => array(
-        0 => 'schema:url',
-      ),
-      'type' => 'rel',
-    ),
-    'title' => array(
-      'predicates' => array(
-        0 => 'schema:name',
-      ),
-      'type' => 'property',
-    ),
-    'field_member' => array(
-      'type' => 'property',
-      'predicates' => array(
-        0 => 'schema:Person',
-        1 => 'foaf:Person',
       ),
     ),
   );
