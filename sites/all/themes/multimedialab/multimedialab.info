@@ -13,3 +13,8 @@ stylesheets[all][] = css/multimedialab.no-query.css
 
 ; Scripts
 scripts[] = js/multimedialab.behaviors.js
+
+settings[edit_toggle_logo] = 0
+settings[edit_toggle_name] = 0
+settings[edit_toggle_slogan] = 0
+
