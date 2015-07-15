@@ -49,7 +49,11 @@ textarea {
 }
 
 body {
-  margin: 0;
+    margin: 0;
+  margin-top: -15px;
+    padding: 0;
+    background-color: #eaeaea;
+
 }
 
 /* normalize.css v1.1.0 | Links | MIT License | git.io/normalize */
@@ -315,6 +319,8 @@ table {
     margin-left: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
+    position: relative;
+    bottom: 1px;
 }
 
 .form-text, input{
@@ -331,6 +337,7 @@ table {
     color: #FFF;
     background-color: #104B7D;
     border: none;
+    position: relative;
 }
 
 .l-region #block-system-main-menu ul, .l-region #block-system-main-menu li{
@@ -348,7 +355,7 @@ table {
 }
 
 .l-region #block-system-main-menu li a:hover{
-    color: #FFF;
+    color: #fdb812;
 }
 
 .l-region #block-system-main-menu .block__title{
@@ -393,13 +400,19 @@ table {
 .l-page{
     max-width: 972px;
     padding: 0px;
-    margin: 0px;
+    padding-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    height: 100%;
+    background-color: #fff;
 }
 
 .header__search{
     padding: 0px;
     margin: 0px;
-    width: 212px;
+    width: 184px;
     position: absolute;
     top: 11px;
     right: 2px;
@@ -411,7 +424,44 @@ table {
     left: 150px;
 }
 
+#header__logo__img{
+    background-image: url("../logo.png");
+    width: 95px;
+    height: 68px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 53px;
+}
 
+.l-region--header{
+    height: 70px;
+}
 
 /* RESPONSIVENESS */
 
+body{
+    border-bottom: 5px solid red;
+}
+
+@media (min-width: 56em){
+    body{
+        border-color: blue;
+    }
+
+    .header__menu{
+        top: 0px;
+        left: 350px;
+    }
+
+    .l-region #block-system-main-menu li a:hover{
+        color: #fff;
+    }
+
+}
+
+@media (max-width: 34.5em){
+    body{
+        border-color: orange;
+    }
+}
