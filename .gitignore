@@ -6,3 +6,6 @@ sites/*/files
 sites/*/private
 
 .idea/
+
+#ignore composer installed libraries
+sites/all/libraries/composer/*
