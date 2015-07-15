@@ -52,8 +52,11 @@ body {
     margin: 0;
   margin-top: -15px;
     padding: 0;
-    background-color: #eaeaea;
-
+    background-color: #e9ebf0;
+    background-image: url("../shadowbg.png");
+    background-repeat: repeat-y;
+    background-position-x: center;
+    background-position-y: 0%;
 }
 
 /* normalize.css v1.1.0 | Links | MIT License | git.io/normalize */
@@ -418,6 +421,29 @@ table {
     right: 2px;
 }
 
+.header__search .form-text{
+    -webkit-appearance: textfield;
+    font-family: inherit;
+    border: none;
+    background: #ededed;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    transition: all .5s;
+    width: 30px;
+    padding-left: 5px;
+    height: 27px;
+}
+
+.header__search .form-text:focus{
+    background-color: #fff;
+    //border-color: #0F4A7C;
+    width: 146px;
+}
+
+.header__search .block__content{
+    float: right;
+}
+
 .header__menu{
     position: absolute;
     top: 25px;
@@ -437,6 +463,11 @@ table {
 .l-region--header{
     height: 70px;
 }
+
+input{
+    outline: none;
+}
+
 
 /* RESPONSIVENESS */
 
