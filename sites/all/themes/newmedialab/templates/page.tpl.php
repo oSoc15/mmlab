@@ -97,9 +97,11 @@
   </header>
 
   <div class="l-main">
-      <div id="homelighted">
-      <?php print render($page['leftlighted']); ?>
-      <?php print render($page['highlighted']); ?>
+      <div class="top-container">
+         <div id="homelighted">
+            <?php print render($page['leftlighted']); ?>
+            <?php print render($page['highlighted']); ?>
+        </div>
       </div>
       <div class="l-content" role="main">
       <?php print $breadcrumb; ?>
