@@ -340,6 +340,10 @@ li.leaf{
     opacity: .9;
 }
 
+#first-time{
+    display: none;
+}
+
 .l-footer{
     width: 100%;
     background-color: #042238;
