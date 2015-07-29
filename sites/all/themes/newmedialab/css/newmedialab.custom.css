@@ -107,6 +107,11 @@ li.leaf{
     color: #FFF;
 }
 
+.top-container{
+    max-width: 970px;
+    margin: 0 auto;
+}
+
 #homelighted{
     display: -webkit-box;
     display: -webkit-flex;
@@ -118,8 +123,6 @@ li.leaf{
     -ms-flex-direction: row;
     flex-direction: row;
     width: 100%;
-    max-width: 970px;
-    margin: 0 auto;
 }
 
 @media (max-width: 40em){
