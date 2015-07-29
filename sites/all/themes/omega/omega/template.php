@@ -807,3 +807,4 @@ function theme_omega_page_layout($variables) {
   $hook = str_replace('-', '_', $variables['omega_layout']['template']);
   return theme($hook, $variables);
 }
+
