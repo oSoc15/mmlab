@@ -15,6 +15,37 @@ summary {
   display: block;
 }
 
+footer {
+    background-color: #0F4A7C;
+    color: white;
+    text-align:center;
+    font-weight:bold;
+}
+
+
+footer img {
+   width:15%;
+   max-height:100%;
+   padding:0.3em;
+   display:inline;
+}
+
+footer #sponsors {
+   text-align:center;
+}
+																										
+footer .block__content {
+   padding-top:.3em;
+
+}
+footer #block-widgets-s-footer-social {
+   width:30%;
+   max-height:100%;
+   display:inherit;
+   margin-left:auto;
+   margin-right:auto;
+}
+
 audio,
 canvas,
 video {
@@ -480,7 +511,7 @@ body{
     //border-bottom: 5px solid red;
 }
 
-@media (min-width: 56em){
+@media (min-width: 56.1em){
     body{
         //border-color: blue;
     }
@@ -493,7 +524,42 @@ body{
     .l-region #block-system-main-menu li a:hover{
         color: #fff;
     }
+}
 
+
+@media (max-width: 56em){
+
+    body{
+        border-color: orange;
+    }
+     footer {
+	background-color: white;
+	color:  #0F4A7C;
+    }
+
+    footer img {
+        width:20%;
+    }
+
+    footer #block-widgets-s-footer-social {
+       width:40%;
+       display:inherit;
+       margin-left:auto;
+       margin-right:auto;
+
+       text-align:center;
+       position:inherit;
+       margin-top: 0em;
+       top: 0em;
+       padding-left: 0em;
+    }
+
+    footer #sponsors {
+       margin-left: auto;
+       margin-right: auto;
+       text-align:center;
+       position:inherit;
+    }
 }
 
 @media (max-width: 24em){
@@ -503,5 +569,21 @@ body{
 
     .header__menu{
         top: 0px;
+    }
+     footer {
+	background-color: white;
+	color:  #0F4A7C;
+    }
+
+    footer img {
+        width:30%;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    footer #block-widgets-s-footer-social {
+       width:50%;
     }
 }
