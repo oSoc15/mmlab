@@ -697,8 +697,9 @@ ul.tabs{
 
 ul.tabs li{
     border-right: none;
-    border: .1em #EFEEEE solid;
+    border: .1em #CCC solid;
     padding: .5em 1em;
+    display: inline-block;
 }
 
 ul.secondary a.active{
@@ -810,4 +811,8 @@ td p {
 ul.primary li.active a, ul.primary li a, ul.primary li a:hover{
     background-color: transparent;
     border: 0;
+}
+
+ul.primary li.active a{
+    color: #FFF;
 }
