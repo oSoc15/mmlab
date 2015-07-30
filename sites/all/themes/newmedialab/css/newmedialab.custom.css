@@ -472,7 +472,7 @@ li.leaf{
     font-weight: lighter;
 }
 
-@media (max-width: 47.5em){
+@media (max-width: 48em){
     .l-footer{
         padding-top: 1em;
     }
@@ -491,7 +491,7 @@ li.leaf{
     padding: 2.2em 1em;
 }
 
-@media (max-width: 47.5em) {
+@media (max-width: 48em) {
     .region-footer{
         margin: 0 auto;
         padding-top: 1em;
@@ -507,7 +507,7 @@ li.leaf{
     opacity: .6;
 }
 
-@media (max-width: 47.5em){
+@media (max-width: 48em){
     .footer__copyright *{
         margin: 0;
     }
@@ -523,7 +523,7 @@ li.leaf{
     vertical-align: middle;
 }
 
-@media (max-width: 47.5em){
+@media (max-width: 48em){
     .footer__partners .content p{
         width: 100%;
         min-width: initial;
@@ -538,7 +538,7 @@ li.leaf{
     opacity: 0.5;
 }
 
-@media (max-width: 47.5em){
+@media (max-width: 48em){
     .footer__logo{
         display: block;
         margin: 1em auto;
