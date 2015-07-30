@@ -347,6 +347,10 @@ li.leaf{
     opacity: .9;
 }
 
+.content-menu__item.last{
+    display: none;
+}
+
 #first-time{
     display: none;
 }
@@ -463,7 +467,7 @@ li.leaf{
 
 .region-sidebar-first{
     float:left;
-    margin-right: 1em;
+    padding-right: 1em;
     width: 20%;
     min-width: 10em;
 }
@@ -508,15 +512,31 @@ li.leaf{
     color: #FFFFFF;
 }
 
-.content-menu--side__item.odd .content-menu--side__link, .content-menu--side__item.odd.last{
+.content-menu--side__item.odd .content-menu--side__link/*, .content-menu--side__item.odd.last*/{
     background-color: #EEE;
 }
 
 
-.content-menu--side__item.even .content-menu--side__link, .content-menu--side__item.even.last{
+.content-menu--side__item.even .content-menu--side__link/*, .content-menu--side__item.even.last*/{
     background-color: #CCE;
 }
 
-.content-menu--side__item.last a{
+/*.content-menu--side__item.last a{
     display: none;
+}*/
+
+/*-------------*/
+
+#page__contents:before, #page__contents:after{
+    display:table;
+}
+
+#class-content{
+    width: 80%;
+    float: left;
+}
+
+#page__focus{
+    max-width: 60.625em;
+    margin: 0 auto;
 }
