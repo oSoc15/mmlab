@@ -75,11 +75,9 @@
         <div class="region region-header">
             <div id="block-block-5" class="header__logo">
                 <div class="content">
-                    <p><a href="http://www.ugent.be"><img id="logo"></a></p>
+                    <a href="/"><p></p></a>
                 </div>
             </div>
-
-
             <?php print render($page['header']); ?>
         </div>
     </header>

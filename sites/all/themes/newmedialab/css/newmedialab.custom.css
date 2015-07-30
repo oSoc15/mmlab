@@ -123,6 +123,7 @@ body {
 }
 
 .header__menu li a,
+.header__menu li a:active,
 .header__menu li a:visited{
     padding: 0 10px;
     height: 45px;
