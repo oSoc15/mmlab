@@ -370,10 +370,6 @@ li.leaf{
     margin-left: 20px;
 }
 
-.home__spotlight ul li.leaf{
-    list-style: square !important;
-}
-
 .home__spotlight li.leaf{
     margin-left: 0;
 }
