@@ -482,6 +482,11 @@ li.leaf{
     padding: 0;
 }
 
+#block-superfish-2{
+
+    border-right: .1em #CCD solid;
+}
+
 .content-menu--side__item{
     margin: 0 !important;
     min-height: 2em;
@@ -509,16 +514,15 @@ li.leaf{
 .content-menu--side__link:hover{
     background-color: #042238 !important;
     border: .1em solid #042238;
-    color: #FFFFFF;
+    color: #FFF;
+    opacity: .5;
 }
 
 .content-menu--side__item.odd .content-menu--side__link/*, .content-menu--side__item.odd.last*/{
-    background-color: #EEE;
 }
 
 
 .content-menu--side__item.even .content-menu--side__link/*, .content-menu--side__item.even.last*/{
-    background-color: #CCE;
 }
 
 /*.content-menu--side__item.last a{
@@ -532,7 +536,7 @@ li.leaf{
 }
 
 #class-content{
-    width: 80%;
+    max-width: 80%;
     float: left;
 }
 
