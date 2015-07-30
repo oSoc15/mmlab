@@ -74,6 +74,24 @@ body {
 .region-header{
     max-width: 60.625em;
     margin: 0 auto;
+    position: relative;
+}
+
+#block-menu-menu-header-menu,
+#block-search-form {
+    display: inline-block;
+   position: absolute;
+}
+
+#block-search-form {
+   right: 0;
+   top: 2em;
+   width: 190px;
+}
+
+#block-menu-menu-header-menu {
+   text-align: right;
+   right: 200px;
 }
 
 #logo{
@@ -129,6 +147,10 @@ body {
     margin-top: 25px;
     display: inline-block;
 }
+
+    .header__menu ul {
+        text-align: right;
+    }
 
 .header__menu h2{
     display: none;
@@ -206,7 +228,6 @@ li.leaf{
 .top-container{
     max-width: 60.625em;
     margin: 0 auto;
-    margin-bottom: 30px;
 }
 
 @media (max-width: 40em){
