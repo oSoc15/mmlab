@@ -83,12 +83,6 @@
     </header>
 
   <div class="l-main">
-      <div class="top-container">
-         <div id="homelighted">
-            <?php print render($page['leftlighted']); ?>
-            <?php print render($page['highlighted']); ?>
-        </div>
-      </div>
       <div class="l-content" role="main">
           <div id="page__focus">
               <?php print render($title_prefix); ?>
