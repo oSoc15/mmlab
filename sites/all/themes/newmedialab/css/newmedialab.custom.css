@@ -2,6 +2,30 @@
 / CHANGES BY TEAM #oSoc15 - CHRISTOPHE LEROY
 */
 
+/**
+ * Clearfix
+ */
+
+.sf-menu:before,
+.sf-menu:after,
+.region-footer:before,
+.region-footer:after,
+.cf:before,
+.cf:after{
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.sf-menu:after,
+.region-footer:after,
+.cf:after{
+    clear: both;
+}
+
+/**
+ * Styles
+ */
+
 html{
     background-color: #003067;
     color: #1D384C;
@@ -366,35 +390,29 @@ li.leaf{
     padding: 2.2em 1em;
 }
 
-.content-menu__item{
-    display: inline-block;
-    width: 33%;
+.sf-menu .content-menu__item{
     font-size: larger;
-    padding-right: 1em;
     font-weight: bold;
+    float: none;
 }
 
-@media (max-width: 40em){
+@media (min-width: 40em){
     .content-menu{
         width: 100%;
         margin: 0
     }
 
-    .content-menu__item{
-        width: 100%;
+    .sf-menu .content-menu__item{
+        width: 33%;
+        margin: 0;
+        float: left;
+        padding-right: 1em;
     }
 }
 
 .content-menu__link{
     color: white !important;
     text-decoration: none;
-}
-
-.sf-menu li{
-    float: none !important;
-    position: initial !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
 }
 
 .content-menu li{
@@ -519,20 +537,6 @@ li.leaf{
     content: url('../images/partner_logos/mml.png');
     height: 1.6em;
 }
-
-.region-footer:before,
-.region-footer:after,
-.cf:before,
-.cf:after{
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.region-footer:after,
-.cf:after{
-    clear: both;
-}
-
 
 /*-----*/
 
