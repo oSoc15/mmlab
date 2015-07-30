@@ -536,6 +536,7 @@ li.leaf{
 #class-content{
     max-width: 80%;
     float: left;
+    padding-left: 1em;
 }
 
 #page__focus{
@@ -551,7 +552,7 @@ li.leaf{
     height: 1em;
     position: absolute;
     top: calc(50% - .5em);
-    right: 1em;
+    right: .5em;
 }
 
 .breadcrumb a{
@@ -564,6 +565,7 @@ li.leaf{
     position: relative;
     top: .1em;
     padding: 0 .2em;
+    right: 1em;
 }
 
 .biblio-export{
@@ -596,5 +598,13 @@ li.leaf{
 }
 
 .biblio-entry{
-    padding: 1em 0;
+    padding: .5em 0;
+    line-height: 1.4em;
+    margin: 0;
+}
+
+.view-research .view-content .item-list ul li {
+    list-style: none;
+    margin: .5em 0;
+    font-weight: bold;
 }
