@@ -352,17 +352,16 @@ li.leaf{
     margin-top: 0;
 }
 
-.home__spotlight li.leaf a, .home__spotlight li.leaf a:hover, .home__spotlight li.leaf a:visited, .home__spotlight li.leaf a:active{
-    color: white;
+.home__spotlight a {
+    color: #d2d9e1;
     margin-left: 0;
     font-size: 18px;
     font-weight: lighter;
-    text-decoration: none;
 }
 
 .home__spotlight a:hover,
 .home__spotlight a:focus{
-    border-bottom: 1px dotted white;
+    color: #fff;
 }
 
 .home__spotlight ul{
