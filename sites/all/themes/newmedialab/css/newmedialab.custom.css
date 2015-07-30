@@ -674,10 +674,18 @@ li.leaf{
     font-weight: bold;
 }
 
+ul.tabs{
+    border: none;
+}
+
 ul.tabs li{
     border-right: none;
     border: .1em #EFEEEE solid;
     padding: .5em 1em;
+}
+
+ul.tabs li a{
+    border: none;
 }
 
 ul.tabs li.active{
@@ -694,8 +702,4 @@ ul.tabs li.active .b img{
 
 ul.tabs:last-child{
     border-right: .1em #EFEEEE solid;
-}
-
-ul.tabs{
-    border: none;
 }
