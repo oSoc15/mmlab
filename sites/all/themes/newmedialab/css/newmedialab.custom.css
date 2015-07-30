@@ -4,6 +4,7 @@
 
 html{
     background-color: #042238;
+    font-family: Helvetica;
 }
 
 body {
@@ -19,8 +20,15 @@ body {
     background-color: #FFF;
 }
 
+.l-content .content{
+    width: 100%;
+    max-width: 60.625em;
+    margin: 0 auto;
+    padding: 0 .9375em;
+}
+
 .content, .main-content{
-    max-width: 970px;
+    max-width: 60.625em;
     margin: 0 auto;
 }
 
@@ -37,37 +45,37 @@ body {
     background: linear-gradient(to right, #1e5799 0%,#1e5799 50%,#fdb812 50%,#fdb812 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#fdb812',GradientType=1 ); /* IE6-9 */
     z-index: -1;
-    height: 31px;
+    height: 1.938em;
     position: absolute;
-    top: 15px;
+    top: 0.9375em;
     width: 100%
 }
 
 .region-header{
     background: url('../images/main/header.png') no-repeat top center;
-    height: 61px;
+    height: 3.813em;
     width: 100%;
-    max-width: 970px;
+    max-width: 60.625em;
     margin: 0 auto;
     z-index: 2;
 }
 
 #logo{
     content: url('../images/main/logo_ugent.png');
-    height: 60px;
-    margin: 0 auto;
+    height: 3.75em;
+    margin:  0 auto;
     display: block;
 }
 
 .header__logo p{
     margin: 0 auto;
-    width: 70px;
+    width: 4.375em;
 }
 
 .header__menu{
     float:right;
     position: relative;
-    bottom: 42px;
+    bottom: 2.6em;
 }
 
 .header__menu h2{
@@ -92,7 +100,7 @@ li.leaf{
 }
 
 .header__menu .last.leaf{
-    padding-right: 15px
+    padding-right: .9375em;
 }
 
 .header__menu a, .header__menu a:visited, .header__menu a:active{
@@ -108,7 +116,7 @@ li.leaf{
 }
 
 .top-container{
-    max-width: 970px;
+    max-width: 60.625em;
     margin: 0 auto;
 }
 
@@ -133,7 +141,7 @@ li.leaf{
 
 #lefthigh{
     width: 50%;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 2.1875em auto;
 }
 
 #righthigh{
@@ -148,7 +156,7 @@ li.leaf{
 }
 
 .home__intro{
-    padding: 0 15px;
+    padding: 0 0.9375em;
     margin: 0;
 }
 
@@ -164,7 +172,7 @@ li.leaf{
 }
 
 .searchbox{
-    margin-left: 15px;
+    margin-left: 0.9375em;
 }
 
     @media (max-width: 40em){
@@ -172,7 +180,7 @@ li.leaf{
         width: 100%;
         position: initial;
         margin: 0;
-        padding: 0 15px;
+        padding: 0 0.9375em;
     }
 }
 
@@ -181,29 +189,29 @@ li.leaf{
 }
 
 .searchbox .form-text{
-    width: calc(100% - 40px);
+    width: calc(100% - 2.5em);
     height: 2em;
-    padding: 2px 5px;
+    padding: .125em .3125em;
     color: #094571;
     font-weight: bold;
 }
 
 .searchbox .form-text:focus{
-    border: 1px #094571 solid;
+    border: .1em #094571 solid;
     box-shadow: none;
     outline-color: transparent;
     outline-style: none;
 }
 
 .searchbox .form-submit{
-    width: 35px;
+    width: 2.2em;
     height: 2em;
     border: 0;
     background-color: #094571;
     color: #FFF;
     position: relative;
-    top: 1px;
-    right: 5px;
+    top: .05em;
+    right: .3em;
 }
 
 .home__spotlight{
@@ -211,7 +219,7 @@ li.leaf{
     background-color: #042238;
     color: white;
     font-size: small;
-    padding: 25px 15px;
+    padding: 1.9em 0.9375em;
     margin: 0 auto;
     height: 100%
 }
@@ -221,7 +229,7 @@ li.leaf{
         width: 100%;
         position: initial;
         margin: 0 !important;
-        padding: 15px !important;
+        padding: 0.9375em !important;
     }
 }
 
@@ -232,12 +240,6 @@ li.leaf{
 }
 
 @media (max-width: 40em){
-    .home__spotlight{
-        margin: 0 0 0 10px;
-        position: initial;
-        width: 100%;
-    }
-
     .home__spotlight .content{
         position: initial;
     }
@@ -251,7 +253,7 @@ li.leaf{
 
 .home__spotlight ul{
     padding: 0;
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 @media (max-width: 40em){
@@ -266,12 +268,15 @@ li.leaf{
 
 @media (max-width: 40em){
     .home__spotlight li.leaf{
-        padding: 5px 0 0 0;
+        padding: .4em 0 0 0;
     }
 }
 
-#main-content{
-    display: none;
+#page__contents{
+    max-width: 60.625em;
+    width:100%;
+    margin: 0 auto;
+    padding: 0;
 }
 
 #block-superfish-1{
@@ -288,14 +293,14 @@ li.leaf{
 #block-superfish-1 ul{
     margin-top: 0;
     width: 100%;
-    padding: 35px 15px;
+    padding: 2.2em 0.9375em;
 }
 
 .content-menu__item{
     display: inline-block;
     width: 33%;
     font-size: larger;
-    padding-right: 15px;
+    padding-right: 0.9375em;
     font-weight: bold;
 }
 
@@ -320,8 +325,10 @@ li.leaf{
     position: initial !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    vertical-align: top !important;
-    margin-top: 10px !important;
+}
+
+.content-menu li{
+    margin-top: .8em !important;
 }
 
 .content-menu__link .sf-title{
@@ -334,8 +341,8 @@ li.leaf{
     font-size: initial;
     font-weight: initial;
     display: block;
-    margin-top: 10px;
-    margin-bottom: 25px;
+    margin-top: .8em;
+    margin-bottom: 1.9em;
     line-height: 1.2em;
     opacity: .9;
 }
@@ -352,7 +359,7 @@ li.leaf{
 
 @media (max-width: 44em){
     .l-footer{
-        padding-top: 15px;
+        padding-top: 0.9375em;
     }
 
     .l-footer *{
@@ -364,15 +371,15 @@ li.leaf{
     min-height: 30%;
     height: auto;
     width: 100%;
-    max-width: 970px;
+    max-width: 60.625em;
     margin: 0 auto;
-    padding: 35px 15px;
+    padding: 2.2em 0.9375em;
 }
 
 @media (max-width: 44em) {
     .region-footer{
         margin: 0 auto;
-        padding-top: 15px;
+        padding-top: 0.9375em;
     }
 }
 
@@ -410,23 +417,23 @@ li.leaf{
 }
 
 .footer__logo{
-    height: 30px;
+    height: 2em;
     width: auto;
     display: inline-block;
-    margin: 0 25px;
+    margin: 0 1.9em;
 }
 
 @media (max-width: 44em){
     .footer__logo{
         display: block;
-        margin: 15px auto;
+        margin: 0.9375em auto;
     }
 }
 
 #iminds_logo{
     content: url('../images/partner_logos/iminds.png');
     margin: 0 auto;
-    height: 25px;
+    height: 1.6em;
 }
 
 #elis_logo{
@@ -435,7 +442,7 @@ li.leaf{
 
 #mmlabpartner_logo{
     content: url('../images/partner_logos/mml.png');
-    height: 25px;
+    height: 1.6em;
 }
 
 .region-footer:before,
@@ -449,4 +456,67 @@ li.leaf{
 .region-footer:after,
 .cf:after{
     clear: both;
+}
+
+
+/*-----*/
+
+.region-sidebar-first{
+    float:left;
+    margin-right: 1em;
+    width: 20%;
+    min-width: 10em;
+}
+
+    @media (max-width: 40em){
+        .region-sidebar-first{
+            display: none;
+        }
+    }
+
+#block-superfish-2 div.content{
+    padding: 0;
+}
+
+.content-menu--side__item{
+    margin: 0 !important;
+    min-height: 2em;
+    vertical-align: middle;
+}
+
+.content-menu--side__link{
+    width: 100%;
+    padding: 1em;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border: .1em solid transparent;
+    font-weight: 600;
+    text-decoration: none;
+    color: #042238;
+}
+
+.content-menu--side__link.active{
+    background-color: #042238 !important;
+    color: #FFF;
+    opacity: .9;
+}
+
+.content-menu--side__link:hover{
+    background-color: #042238 !important;
+    border: .1em solid #042238;
+    color: #FFFFFF;
+}
+
+.content-menu--side__item.odd .content-menu--side__link, .content-menu--side__item.odd.last{
+    background-color: #EEE;
+}
+
+
+.content-menu--side__item.even .content-menu--side__link, .content-menu--side__item.even.last{
+    background-color: #CCE;
+}
+
+.content-menu--side__item.last a{
+    display: none;
 }
