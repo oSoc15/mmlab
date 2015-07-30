@@ -586,10 +586,10 @@ li.leaf{
     border: none;
     font-size: 1.2em;
     padding-left: 0;
-    margin-bottom: 0
+    margin-bottom: 0;
+    border-bottom: .1em solid #758490;
 }
 
 .biblio-entry{
-    border-bottom: .1em solid #B0C3D2;
     padding: 1em 0;
 }
