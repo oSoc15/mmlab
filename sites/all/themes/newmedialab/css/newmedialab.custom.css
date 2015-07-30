@@ -736,3 +736,49 @@ ul.tabs{
 ul{
     list-style: none;
 }
+
+/* ---- Team page ---- */
+
+.team-list ul {
+   margin: 0;
+   padding: 0;
+   position: relative;
+}
+
+.team-list ul li {
+   display: inline-block;
+   width: 33%;
+   margin-bottom: 2em;
+   background-color: #CCCCDF ;
+}
+
+.views-field-picture {
+   float: left;
+   margin-right: 1em;
+   width: 100px;
+   height: 100px;
+   overflow: hidden;
+   background-color: #CCCCDF ;
+   position: relative;
+}
+
+.user-picture img {
+   width: auto;
+   height: auto;
+   max-width: none;
+   position: relative;
+   z-index: 1;
+}
+
+.views-field-picture:after {
+   content: "\f007";
+   font-family: fontawesome;
+   color: white;
+   font-size: 500%;
+   display: block;
+   width: 64px;
+   margin-top: 10px;
+   position: absolute;
+   z-index: 0;
+   left: calc(50% - 64px / 2);
+}
