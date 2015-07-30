@@ -709,7 +709,7 @@ ul.tabs li{
     padding: .5em 1em;
 }
 
-ul.tabs li a{
+ul.secondary a.active{
     border-bottom: none;
 }
 
