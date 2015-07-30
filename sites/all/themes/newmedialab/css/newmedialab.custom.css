@@ -325,6 +325,7 @@ li.leaf{
     width: 2.5em;
     background-color: #275381;
     color: #FFF;
+    font-family: fontawesome;
 }
 
 .home__spotlight{
