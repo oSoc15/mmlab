@@ -710,7 +710,7 @@ ul.tabs li{
 }
 
 ul.tabs li a{
-    border: none;
+    border-bottom: none;
 }
 
 ul.tabs li.active{
