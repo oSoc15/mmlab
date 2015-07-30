@@ -632,7 +632,7 @@ li.leaf{
 
     @media(max-width: 40em){
         #class-content{
-            width: 100%;
+            max-width: 100%;
         }
     }
 
