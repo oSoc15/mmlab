@@ -761,10 +761,9 @@ tr.even, tr.odd{
 }
 
 .views-field-picture {
-    float: left;
     margin-right: 1em;
-    min-width: 100px;
-    min-height: 100px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
     position: relative;
     background-color: #CCCCDF ;
