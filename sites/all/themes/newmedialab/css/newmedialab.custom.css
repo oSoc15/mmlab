@@ -538,7 +538,7 @@ li.leaf{
     opacity: 0.5;
 }
 
-@media (max-width: 46em){
+@media (max-width: 47em){
     .footer__logo{
         display: block;
         margin: 1em auto;
