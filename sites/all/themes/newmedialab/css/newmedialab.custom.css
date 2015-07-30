@@ -3,7 +3,7 @@
 */
 
 html{
-    background-color: #003268;
+    background-color: #003067;
     color: #1D384C;
 }
 
@@ -130,14 +130,14 @@ body {
     line-height: 45px;
     display: inline-block;
     font-size: 15px;
-    color: #003268;
+    color: #003067;
 }
 
 .header__menu li a:hover,
 .header__menu li a:focus
 {
     color: white;
-    background: #003268;
+    background: #003067;
 }
 
 @media (max-width: 768px){
@@ -287,7 +287,7 @@ li.leaf{
 
 .home__spotlight{
     width: 70%;
-    background-color: #003268;
+    background-color: #003067;
     color: white;
     padding: 30px;
     margin: auto;
@@ -427,7 +427,7 @@ li.leaf{
 
 .l-footer{
     width: 100%;
-    background-color: #003268;
+    background-color: #003067;
     margin: 0 auto;
     font-weight: lighter;
 }
@@ -573,17 +573,17 @@ li.leaf{
     border: .1em solid transparent;
     font-weight: 600;
     text-decoration: none;
-    color: #003268;
+    color: #003067;
 }
 
 .content-menu--side__link.active, .content-menu--side__link.active:hover{
-    background-color: #003268 !important;
+    background-color: #003067 !important;
     color: #FFF;
     opacity: .9;
 }
 
 .content-menu--side__link:hover{
-    background-color: #003268 !important;
+    background-color: #003067 !important;
     color: #FFF;
     opacity: .5;
 }
