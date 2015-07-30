@@ -24,7 +24,7 @@ body {
     width: 100%;
     max-width: 60.625em;
     margin: 0 auto;
-    padding: 0 .9375em;
+    padding: 0 1em;
 }
 
 .content, .main-content{
@@ -100,7 +100,7 @@ li.leaf{
 }
 
 .header__menu .last.leaf{
-    padding-right: .9375em;
+    padding-right: 1em;
 }
 
 .header__menu a, .header__menu a:visited, .header__menu a:active{
@@ -156,7 +156,7 @@ li.leaf{
 }
 
 .home__intro{
-    padding: 0 0.9375em;
+    padding: 0 1em;
     margin: 0;
 }
 
@@ -172,7 +172,7 @@ li.leaf{
 }
 
 .searchbox{
-    margin-left: 0.9375em;
+    margin-left: 1em;
 }
 
     @media (max-width: 40em){
@@ -180,7 +180,7 @@ li.leaf{
         width: 100%;
         position: initial;
         margin: 0;
-        padding: 0 0.9375em;
+        padding: 0 1em;
     }
 }
 
@@ -219,7 +219,7 @@ li.leaf{
     background-color: #042238;
     color: white;
     font-size: small;
-    padding: 1.9em 0.9375em;
+    padding: 1.9em 1em;
     margin: 0 auto;
     height: 100%
 }
@@ -229,7 +229,7 @@ li.leaf{
         width: 100%;
         position: initial;
         margin: 0 !important;
-        padding: 0.9375em !important;
+        padding: 1em !important;
     }
 }
 
@@ -293,14 +293,14 @@ li.leaf{
 #block-superfish-1 ul{
     margin-top: 0;
     width: 100%;
-    padding: 2.2em 0.9375em;
+    padding: 2.2em 1em;
 }
 
 .content-menu__item{
     display: inline-block;
     width: 33%;
     font-size: larger;
-    padding-right: 0.9375em;
+    padding-right: 1em;
     font-weight: bold;
 }
 
@@ -363,7 +363,7 @@ li.leaf{
 
 @media (max-width: 44em){
     .l-footer{
-        padding-top: 0.9375em;
+        padding-top: 1em;
     }
 
     .l-footer *{
@@ -377,13 +377,13 @@ li.leaf{
     width: 100%;
     max-width: 60.625em;
     margin: 0 auto;
-    padding: 2.2em 0.9375em;
+    padding: 2.2em 1em;
 }
 
 @media (max-width: 44em) {
     .region-footer{
         margin: 0 auto;
-        padding-top: 0.9375em;
+        padding-top: 1em;
     }
 }
 
@@ -430,7 +430,7 @@ li.leaf{
 @media (max-width: 44em){
     .footer__logo{
         display: block;
-        margin: 0.9375em auto;
+        margin: 1em auto;
     }
 }
 
@@ -483,7 +483,7 @@ li.leaf{
 }
 
 #block-superfish-2{
-
+    padding: 2em 0;
     border-right: .1em #CCD solid;
 }
 
@@ -503,9 +503,10 @@ li.leaf{
     font-weight: 600;
     text-decoration: none;
     color: #042238;
+    position: relatve;
 }
 
-.content-menu--side__link.active{
+.content-menu--side__link.active, .content-menu--side__link.active:hover{
     background-color: #042238 !important;
     color: #FFF;
     opacity: .9;
@@ -513,16 +514,8 @@ li.leaf{
 
 .content-menu--side__link:hover{
     background-color: #042238 !important;
-    border: .1em solid #042238;
     color: #FFF;
     opacity: .5;
-}
-
-.content-menu--side__item.odd .content-menu--side__link/*, .content-menu--side__item.odd.last*/{
-}
-
-
-.content-menu--side__item.even .content-menu--side__link/*, .content-menu--side__item.even.last*/{
 }
 
 /*.content-menu--side__item.last a{
@@ -543,4 +536,15 @@ li.leaf{
 #page__focus{
     max-width: 60.625em;
     margin: 0 auto;
+}
+
+.breadcrumb{
+    padding-left: 1em;
+}
+
+.content-menu--side__arrow{
+    height: 1em;
+    position: absolute;
+    top: calc(50% - .5em);
+    right: 1em;
 }
