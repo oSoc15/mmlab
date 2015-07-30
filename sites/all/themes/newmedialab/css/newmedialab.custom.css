@@ -28,6 +28,7 @@
 
 html{
     color: #1D384C;
+    background-color: #003067;
 }
 
 a{
@@ -819,4 +820,9 @@ ul.primary li.active a{
 
 ul.primary li a{
     margin-right: 0;
+}
+
+#edit-submit{
+    background-color: transparentx;
+    border: 0;
 }
