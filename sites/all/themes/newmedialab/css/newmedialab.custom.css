@@ -71,7 +71,7 @@ body {
     display: none;
 }
 
-.region-header{
+.region-header {
     max-width: 60.625em;
     margin: 0 auto;
     position: relative;
@@ -300,13 +300,14 @@ li.leaf{
     }
 }
 
-.searchbox *{
-    margin: 0;
+.searchbox input {
+    height: 2em;
+    border: none;
+    float: left;
 }
 
 .searchbox .form-text{
     width: calc(100% - 2.5em);
-    height: 2em;
     padding: .125em .3125em;
     color: #275381;
     font-weight: bold;
@@ -320,14 +321,10 @@ li.leaf{
 }
 
 .searchbox .form-submit{
-    width: 2.2em;
-    height: 2em;
-    border: 0;
+    border: none;
+    width: 2.5em;
     background-color: #275381;
     color: #FFF;
-    position: relative;
-    top: .05em;
-    right: .3em;
 }
 
 .home__spotlight{
