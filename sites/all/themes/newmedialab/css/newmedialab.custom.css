@@ -721,7 +721,7 @@ ul.tabs li.active .b img{
     margin-left: .5em;
 }
 
-ul.tabs:last-child{
+ul.tabs.secondary li:last-child{
     border-right: .1em #EFEEEE solid;
 }
 
@@ -808,7 +808,7 @@ td p {
     margin: 0;
 }
 
-/* ---- Tabs ---- */
+/* ---- Tabs & Submit button ---- */
 
 ul.primary li.active a, ul.primary li a, ul.primary li a:hover{
     background-color: transparent;
@@ -821,6 +821,7 @@ ul.primary li.active a{
 
 ul.primary li a{
     margin-right: 0;
+    color: #1D384C;
 }
 
 #edit-submit{
@@ -828,8 +829,16 @@ ul.primary li a{
     border: 0;
 }
 
+span.b, ul.tabs.primary li a{
+    color: #1D384C;
+}
+
+ul.primary.tabs li{
+    border: .1em #CCC solid;
+}
+
 /* ---- Pagination ---- */
 
-.pager{
+.item-list ul.pager{
     margin: 1em 0;
 }
