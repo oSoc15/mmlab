@@ -104,23 +104,26 @@
         </div>
       </div>
       <div class="l-content" role="main">
-          <?php print render($title_prefix); ?>
-          <div id="page__contents">
+          <div id="page__focus">
+              <?php print render($title_prefix); ?>
+
               <?php print $breadcrumb; ?>
-              <?php print render($page['sidebar_first']); ?>
-                  <?php if ($title): ?>
-              <div id="class-content">
-                <h1><?php print $title; ?></h1>
-              <?php endif; ?>
-              <?php print render($title_suffix); ?>
-              <?php print $messages; ?>
-              <?php print render($tabs); ?>
-              <?php print render($page['help']); ?>
-              <?php if ($action_links): ?>
-                <ul class="action-links"><?php print render($action_links); ?></ul>
-              <?php endif; ?>
+              <div id="page__contents" class="cf">
+                  <?php print render($page['sidebar_first']); ?>
+                      <?php if ($title): ?>
+                  <div id="class-content">
+                    <h1><?php print $title; ?></h1>
+                  <?php endif; ?>
+                  <?php print render($title_suffix); ?>
+                  <?php print $messages; ?>
+                  <?php print render($tabs); ?>
+                  <?php print render($page['help']); ?>
+                  <?php if ($action_links): ?>
+                    <ul class="action-links"><?php print render($action_links); ?></ul>
+                  <?php endif; ?>
+                  <?php print render($page['content']); ?>
+                  </div>
               </div>
-              <?php print render($page['content']); ?>
           </div>
         </div>
 
