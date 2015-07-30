@@ -680,15 +680,15 @@ ul.tabs li{
     padding: .5em 1em;
 }
 
-ul.tabs li:active{
+ul.tabs li.active{
     background-color: #275381;
 }
 
-ul.tabs li:active .b{
+ul.tabs li.active .b{
     color: white;
 }
 
-ul.tabs li:active .b img{
+ul.tabs li.active .b img{
     margin-left: .5em;
 }
 
