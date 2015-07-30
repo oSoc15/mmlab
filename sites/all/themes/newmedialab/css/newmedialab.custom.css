@@ -457,10 +457,6 @@ li.leaf{
         opacity: 1;
     }
 
-.content-menu__item.last{
-    display: none;
-}
-
 #first-time{
     display: none;
 }
