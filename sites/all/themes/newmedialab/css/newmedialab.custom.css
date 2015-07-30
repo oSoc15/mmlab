@@ -737,48 +737,57 @@ ul{
     list-style: none;
 }
 
+.sf-menu li{
+    float: none;
+}
+
 /* ---- Team page ---- */
 
 .team-list ul {
-   margin: 0;
-   padding: 0;
-   position: relative;
+    margin: 0;
+    padding: 0;
+    position: relative;
 }
 
 .team-list ul li {
-   display: inline-block;
-   width: 33%;
-   margin-bottom: 2em;
-   background-color: #CCCCDF ;
+    display: inline-block;
+    width: 33%;
+    margin-bottom: 2em;
+    overflow: auto;
 }
 
 .views-field-picture {
-   float: left;
-   margin-right: 1em;
-   width: 100px;
-   height: 100px;
-   overflow: hidden;
-   background-color: #CCCCDF ;
-   position: relative;
+    float: left;
+    margin-right: 1em;
+    min-width: 100px;
+    min-height: 100px;
+    overflow: hidden;
+    position: relative;
+    background-color: #CCCCDF ;
 }
 
 .user-picture img {
-   width: auto;
-   height: auto;
-   max-width: none;
-   position: relative;
-   z-index: 1;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: none;
+    position: relative;
+    z-index: 1;
 }
 
 .views-field-picture:after {
-   content: "\f007";
-   font-family: fontawesome;
-   color: white;
-   font-size: 500%;
-   display: block;
-   width: 64px;
-   margin-top: 10px;
-   position: absolute;
-   z-index: 0;
-   left: calc(50% - 64px / 2);
+    content: "\f007";
+    font-family: fontawesome;
+    color: white;
+    font-size: 500%;
+    display: block;
+    width: 64px;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 0;
+    left: calc(50% - 64px / 2);
+}
+
+.views-field-name a.username {
+    text-decoration: none;
+    font-weight: 600;
 }
