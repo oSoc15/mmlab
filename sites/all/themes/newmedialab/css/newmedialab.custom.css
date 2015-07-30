@@ -566,7 +566,7 @@ li.leaf{
     opacity: .7;
 }
 
-#class-content h1 {
+#class-content h1{
     color: #1D384C;
 }
 
@@ -575,18 +575,27 @@ li.leaf{
     opacity: .7;
 }
 
-.biblio-alpha-line a {
+.biblio-alpha-line a{
     text-decoration: none;
     color: #1D384C;
     opacity: .7;
     font-weight: bold;
 }
 
-.biblio-separator-bar {
+.biblio-alpha-line a:hover{
+    color: #0E202D;
+    opacity: .9;
+}
+
+.biblio-separator-bar{
     background: none;
     border: none;
     font-size: 1.2em;
     padding-left: 0;
     border-bottom: .1em solid #758490;
     color: #1D384C;
+}
+
+.biblio-entry{
+    border-bottom: .1em solid #B0C3D2;
 }
