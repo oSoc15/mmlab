@@ -613,7 +613,8 @@ li.leaf{
 }
 
 #class-content{
-    max-width: 80%;
+    max-width: calc(100% - 10em);
+    width: 80%;
     float: left;
     padding-left: 1em;
 }
@@ -825,4 +826,10 @@ ul.primary li a{
 #edit-submit{
     background-color: transparentx;
     border: 0;
+}
+
+/* ---- Pagination ---- */
+
+.pager{
+    margin: 1em 0;
 }
