@@ -614,10 +614,6 @@ li.leaf{
     opacity: .5;
 }
 
-/*.content-menu--side__item.last a{
-    display: none;
-}*/
-
 /*-------------*/
 
 #page__contents:before, #page__contents:after{
@@ -745,6 +741,10 @@ ul{
 
 .sf-menu li{
     float: none;
+}
+
+h1{
+    margin: 0 0 .67em 0;
 }
 
 /* ---- Team page ---- */
