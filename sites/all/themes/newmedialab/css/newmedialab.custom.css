@@ -804,3 +804,10 @@ td {
 td p {
     margin: 0;
 }
+
+/* ---- Tabs ---- */
+
+ul.primary li.active a, ul.primary li a{
+    background-color: transparent;
+    border: 0;
+}
