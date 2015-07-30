@@ -548,3 +548,15 @@ li.leaf{
     top: calc(50% - .5em);
     right: 1em;
 }
+
+.breadcrumb a{
+    color: #021829;
+}
+
+.breadcrumb__delimiter{
+    font-size: 1.2em;
+    opacity: .4;
+    position: relative;
+    top: .1em;
+    padding: 0 .2em;
+}
