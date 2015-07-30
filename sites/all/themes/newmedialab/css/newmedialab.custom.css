@@ -803,3 +803,14 @@ tr.even, tr.odd{
     text-decoration: none;
     font-weight: 600;
 }
+
+/* ---- Detail pages ---- */
+
+td {
+    padding: 0.4em 1em 0.4em 0;
+    vertical-align: top;
+}
+
+td p {
+    margin: 0;
+}
