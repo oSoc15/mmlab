@@ -807,7 +807,7 @@ td p {
 
 /* ---- Tabs ---- */
 
-ul.primary li.active a, ul.primary li a{
+ul.primary li.active a, ul.primary li a, ul.primary li a:hover{
     background-color: transparent;
     border: 0;
 }
