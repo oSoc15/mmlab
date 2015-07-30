@@ -3,8 +3,7 @@
 */
 
 html{
-    background-color: #042238;
-    font-family: Helvetica;
+    background-color: #003268;
 }
 
 body {
@@ -12,6 +11,8 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #333;
 }
 
 .l-page{
@@ -20,11 +21,15 @@ body {
     background-color: #FFF;
 }
 
+.l-content > h1{
+    display: none;
+}
+
 .l-content .content{
     width: 100%;
     max-width: 60.625em;
     margin: 0 auto;
-    padding: 0 .9375em;
+    padding: 0
 }
 
 .content, .main-content{
@@ -36,46 +41,63 @@ body {
     display: none;
 }
 
-.l-branding{
-    background: -moz-linear-gradient(left, #1e5799 0%, #1e5799 50%, #fdb812 50%, #fdb812 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(50%,#1e5799), color-stop(50%,#fdb812), color-stop(100%,#fdb812)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(left, #1e5799 0%,#1e5799 50%,#fdb812 50%,#fdb812 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(left, #1e5799 0%,#1e5799 50%,#fdb812 50%,#fdb812 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(left, #1e5799 0%,#1e5799 50%,#fdb812 50%,#fdb812 100%); /* IE10+ */
-    background: linear-gradient(to right, #1e5799 0%,#1e5799 50%,#fdb812 50%,#fdb812 100%); /* W3C */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#fdb812',GradientType=1 ); /* IE6-9 */
-    z-index: -1;
-    height: 1.938em;
-    position: absolute;
-    top: 0.9375em;
-    width: 100%
-}
-
 .region-header{
-    background: url('../images/main/header.png') no-repeat top center;
-    height: 3.813em;
-    width: 100%;
     max-width: 60.625em;
     margin: 0 auto;
-    z-index: 2;
 }
 
 #logo{
-    content: url('../images/main/logo_ugent.png');
-    height: 3.75em;
-    margin:  0 auto;
-    display: block;
+
+}
+
+.l-header{
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.header__logo{
+    margin: 0 !important;
+    width: 40%;
+    float: left;
+    display: inline-block;
 }
 
 .header__logo p{
-    margin: 0 auto;
-    width: 4.375em;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    width: 367px;
+    background: url('../images/main/logo.jpg') no-repeat center center;
+    height: 120px;
+}
+
+.header__logo p:before{
+    content: ' ';
+    position: absolute;
+    top: 25px;
+    right: 367px;
+    width: 999px;
+    height: 45px;
+    background: #003167;
+}
+
+.header__logo p:after{
+    content: ' ';
+    position: absolute;
+    top: 25px;
+    left: 367px;
+    width: 2999px;
+    height: 45px;
+    background: #ffcd00;
 }
 
 .header__menu{
-    float:right;
-    position: relative;
-    bottom: 2.6em;
+    width: 50%;
+    height: 45px;
+    max-width: 60.625em;
+    margin: 0;
+    margin-top: 25px;
+    display: inline-block;
 }
 
 .header__menu h2{
@@ -89,6 +111,41 @@ body {
 
 .header__menu li{
     display: inline-block;
+    height: 45px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header__menu li a,
+.header__menu li a:visited{
+    padding: 0 10px;
+    height: 45px;
+    line-height: 45px;
+    display: inline-block;
+    font-size: 15px;
+    color: #003268;
+}
+
+.header__menu li a:hover,
+.header__menu li a:focus
+{
+    color: white;
+    background: #003268;
+}
+
+@media (max-width: 768px){
+
+
+    .header__logo{
+        float: none;
+    }
+
+    .header__menu{
+        padding: 0 0.9375em;
+        margin-top: 0px;
+        width: 100%;
+        display: block;
+    }
 }
 
 li.leaf{
@@ -118,6 +175,13 @@ li.leaf{
 .top-container{
     max-width: 60.625em;
     margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 40em){
+    .top-container{
+        margin-bottom: 0px;
+    }
 }
 
 #homelighted{
@@ -146,7 +210,7 @@ li.leaf{
 
 #righthigh{
     width: 50%;
-    margin: auto auto 0 auto;
+    margin: 0 auto;
 }
 
 @media (max-width: 40em){
@@ -192,12 +256,12 @@ li.leaf{
     width: calc(100% - 2.5em);
     height: 2em;
     padding: .125em .3125em;
-    color: #094571;
+    color: #275381;
     font-weight: bold;
 }
 
 .searchbox .form-text:focus{
-    border: .1em #094571 solid;
+    border: .1em #275381 solid;
     box-shadow: none;
     outline-color: transparent;
     outline-style: none;
@@ -207,7 +271,7 @@ li.leaf{
     width: 2.2em;
     height: 2em;
     border: 0;
-    background-color: #094571;
+    background-color: #275381;
     color: #FFF;
     position: relative;
     top: .05em;
@@ -216,11 +280,10 @@ li.leaf{
 
 .home__spotlight{
     width: 70%;
-    background-color: #042238;
+    background-color: #003268;
     color: white;
-    font-size: small;
-    padding: 1.9em 0.9375em;
-    margin: 0 auto;
+    padding: 30px;
+    margin: auto;
     height: 100%
 }
 
@@ -229,37 +292,37 @@ li.leaf{
         width: 100%;
         position: initial;
         margin: 0 !important;
-        padding: 0.9375em !important;
+        padding: 30px 0.9375em !important;
     }
 }
 
 .home__spotlight h2{
-    font-size: small;
+    font-size: 20px;
     font-weight: normal;
     margin-top: 0;
-}
-
-@media (max-width: 40em){
-    .home__spotlight .content{
-        position: initial;
-    }
 }
 
 .home__spotlight li.leaf a, .home__spotlight li.leaf a:hover, .home__spotlight li.leaf a:visited, .home__spotlight li.leaf a:active{
     color: white;
     margin-left: 0;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: lighter;
+    text-decoration: none;
+}
+
+.home__spotlight a:hover,
+.home__spotlight a:focus{
+    border-bottom: 1px dotted white;
 }
 
 .home__spotlight ul{
     padding: 0;
     margin-bottom: 0;
+    margin-left: 20px;
 }
 
-@media (max-width: 40em){
-    .home__spotlight ul{
-        margin: 0;
-    }
+.home__spotlight ul li.leaf{
+    list-style: square !important;
 }
 
 .home__spotlight li.leaf{
@@ -283,7 +346,7 @@ li.leaf{
     min-height: 50%;
     height: 100%;
     width: 100%;
-    background-color: #094571;
+    background-color: #275381;
 }
 
 #block-superfish-1 h2{
@@ -357,8 +420,9 @@ li.leaf{
 
 .l-footer{
     width: 100%;
-    background-color: #042238;
+    background-color: #003268;
     margin: 0 auto;
+    font-weight: lighter;
 }
 
 @media (max-width: 44em){
@@ -425,6 +489,7 @@ li.leaf{
     width: auto;
     display: inline-block;
     margin: 0 1.9em;
+    opacity: 0.5;
 }
 
 @media (max-width: 44em){
@@ -502,18 +567,18 @@ li.leaf{
     border: .1em solid transparent;
     font-weight: 600;
     text-decoration: none;
-    color: #042238;
+    color: #003268;
 }
 
 .content-menu--side__link.active{
-    background-color: #042238 !important;
+    background-color: #003268 !important;
     color: #FFF;
     opacity: .9;
 }
 
 .content-menu--side__link:hover{
-    background-color: #042238 !important;
-    border: .1em solid #042238;
+    background-color: #003268 !important;
+    border: .1em solid #003268;
     color: #FFF;
     opacity: .5;
 }
@@ -543,4 +608,8 @@ li.leaf{
 #page__focus{
     max-width: 60.625em;
     margin: 0 auto;
+}
+
+#search-block-form{
+
 }

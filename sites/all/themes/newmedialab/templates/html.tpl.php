@@ -59,7 +59,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <?php print $styles; ?>
   <?php print $scripts; ?>
-
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700italic,700,400italic,300,300italic' rel='stylesheet' type='text/css'>
 </head>
 <body<?php print $attributes;?>>
   <a href="#main-content" class="element-invisible element-focusable"><?php print t('Skip to main content'); ?></a>

@@ -1,5 +1,5 @@
 {
-  "name": "{{ THEME }}",
+  "name": "mmlab",
   "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
