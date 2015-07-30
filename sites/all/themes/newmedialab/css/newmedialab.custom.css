@@ -388,7 +388,7 @@ li.leaf{
     max-width: 60.625em;
     width:100%;
     margin: 0 auto;
-    padding: 0;
+    padding: 0 0 1em 0;
 }
 
 #block-superfish-1{
@@ -747,10 +747,6 @@ ul{
 
 h1{
     margin: 0 0 .67em 0;
-}
-
-.l-main{
-    padding-bottom: 1em;
 }
 
 /* ---- Team page ---- */
