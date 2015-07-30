@@ -695,3 +695,7 @@ ul.tabs li:active .b img{
 ul.tabs:last-child{
     border-right: .1em #EFEEEE solid;
 }
+
+ul.tabs{
+    border: none;
+}
