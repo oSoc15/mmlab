@@ -4,7 +4,7 @@
 
 html{
     background-color: #042238;
-    font-family: Helvetica;
+    color: #1D384C;
 }
 
 body {
@@ -566,18 +566,12 @@ li.leaf{
     opacity: .7;
 }
 
-#class-content h1{
-    color: #1D384C;
-}
-
 .biblio-export{
-    color: #1D384C;
     opacity: .7;
 }
 
 .biblio-alpha-line a{
     text-decoration: none;
-    color: #1D384C;
     opacity: .7;
     font-weight: bold;
 }
@@ -592,10 +586,10 @@ li.leaf{
     border: none;
     font-size: 1.2em;
     padding-left: 0;
-    border-bottom: .1em solid #758490;
-    color: #1D384C;
+    margin-bottom: 0
 }
 
 .biblio-entry{
     border-bottom: .1em solid #B0C3D2;
+    padding: 1em 0;
 }
