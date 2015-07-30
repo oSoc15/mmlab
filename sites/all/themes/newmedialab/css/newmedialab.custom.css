@@ -2,8 +2,32 @@
 / CHANGES BY TEAM #oSoc15 - CHRISTOPHE LEROY
 */
 
+/**
+ * Clearfix
+ */
+
+.sf-menu:before,
+.sf-menu:after,
+.region-footer:before,
+.region-footer:after,
+.cf:before,
+.cf:after{
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.sf-menu:after,
+.region-footer:after,
+.cf:after{
+    clear: both;
+}
+
+/**
+ * Styles
+ */
+
 html{
-    background-color: #003268;
+    background-color: #003067;
     color: #1D384C;
 }
 
@@ -47,9 +71,27 @@ body {
     display: none;
 }
 
-.region-header{
+.region-header {
     max-width: 60.625em;
     margin: 0 auto;
+    position: relative;
+}
+
+#block-menu-menu-header-menu,
+#block-search-form {
+    display: inline-block;
+   position: absolute;
+}
+
+#block-search-form {
+   right: 0;
+   top: 2em;
+   width: 190px;
+}
+
+#block-menu-menu-header-menu {
+   text-align: right;
+   right: 200px;
 }
 
 #logo{
@@ -106,6 +148,10 @@ body {
     display: inline-block;
 }
 
+    .header__menu ul {
+        text-align: right;
+    }
+
 .header__menu h2{
     display: none;
 }
@@ -130,14 +176,14 @@ body {
     line-height: 45px;
     display: inline-block;
     font-size: 15px;
-    color: #003268;
+    color: #003067;
 }
 
 .header__menu li a:hover,
 .header__menu li a:focus
 {
     color: white;
-    background: #003268;
+    background: #003067;
 }
 
 @media (max-width: 768px){
@@ -182,7 +228,6 @@ li.leaf{
 .top-container{
     max-width: 60.625em;
     margin: 0 auto;
-    margin-bottom: 30px;
 }
 
 @media (max-width: 40em){
@@ -255,39 +300,37 @@ li.leaf{
     }
 }
 
-.searchbox *{
-    margin: 0;
+.searchbox input {
+    height: 2em;
+    border: none;
+    float: left;
 }
 
 .searchbox .form-text{
     width: calc(100% - 2.5em);
-    height: 2em;
     padding: .125em .3125em;
-    color: #275381;
+    color: #084892;
     font-weight: bold;
 }
 
 .searchbox .form-text:focus{
-    border: .1em #275381 solid;
+    border: .1em #084892 solid;
     box-shadow: none;
     outline-color: transparent;
     outline-style: none;
 }
 
 .searchbox .form-submit{
-    width: 2.2em;
-    height: 2em;
-    border: 0;
-    background-color: #275381;
+    border: none;
+    width: 2.5em;
+    background-color: #084892;
     color: #FFF;
-    position: relative;
-    top: .05em;
-    right: .3em;
+    font-family: fontawesome;
 }
 
 .home__spotlight{
     width: 70%;
-    background-color: #003268;
+    background-color: #003067;
     color: white;
     padding: 30px;
     margin: auto;
@@ -309,17 +352,16 @@ li.leaf{
     margin-top: 0;
 }
 
-.home__spotlight li.leaf a, .home__spotlight li.leaf a:hover, .home__spotlight li.leaf a:visited, .home__spotlight li.leaf a:active{
-    color: white;
+.home__spotlight a {
+    color: #d2d9e1;
     margin-left: 0;
     font-size: 18px;
     font-weight: lighter;
-    text-decoration: none;
 }
 
 .home__spotlight a:hover,
 .home__spotlight a:focus{
-    border-bottom: 1px dotted white;
+    color: #fff;
 }
 
 .home__spotlight ul{
@@ -353,7 +395,7 @@ li.leaf{
     min-height: 50%;
     height: 100%;
     width: 100%;
-    background-color: #275381;
+    background-color: #084892;
 }
 
 #block-superfish-1 h2{
@@ -366,35 +408,29 @@ li.leaf{
     padding: 2.2em 1em;
 }
 
-.content-menu__item{
-    display: inline-block;
-    width: 33%;
+.sf-menu .content-menu__item{
     font-size: larger;
-    padding-right: 1em;
     font-weight: bold;
+    float: none;
 }
 
-@media (max-width: 40em){
+@media (min-width: 40em){
     .content-menu{
         width: 100%;
         margin: 0
     }
 
-    .content-menu__item{
-        width: 100%;
+    .sf-menu .content-menu__item{
+        width: 33%;
+        margin: 0;
+        float: left;
+        padding-right: 1em;
     }
 }
 
 .content-menu__link{
     color: white !important;
     text-decoration: none;
-}
-
-.sf-menu li{
-    float: none !important;
-    position: initial !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
 }
 
 .content-menu li{
@@ -414,8 +450,12 @@ li.leaf{
     margin-top: .8em;
     margin-bottom: 1.9em;
     line-height: 1.2em;
-    opacity: .9;
+    opacity: .8;
 }
+
+    .content-menu__link:hover .sf-description {
+        opacity: 1;
+    }
 
 .content-menu__item.last{
     display: none;
@@ -427,7 +467,7 @@ li.leaf{
 
 .l-footer{
     width: 100%;
-    background-color: #003268;
+    background-color: #003067;
     margin: 0 auto;
     font-weight: lighter;
 }
@@ -462,10 +502,9 @@ li.leaf{
     text-align: center;
     padding: 0;
     margin: 0;
-    color: white;
-    font-size: .8em;
+    color: #fff;
     float: left;
-    opacity: .9;
+    opacity: .6;
 }
 
 @media (max-width: 44em){
@@ -521,20 +560,6 @@ li.leaf{
     height: 1.6em;
 }
 
-.region-footer:before,
-.region-footer:after,
-.cf:before,
-.cf:after{
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
-
-.region-footer:after,
-.cf:after{
-    clear: both;
-}
-
-
 /*-----*/
 
 .region-sidebar-first{
@@ -574,17 +599,17 @@ li.leaf{
     border: .1em solid transparent;
     font-weight: 600;
     text-decoration: none;
-    color: #003268;
+    color: #003067;
 }
 
 .content-menu--side__link.active, .content-menu--side__link.active:hover{
-    background-color: #003268 !important;
+    background-color: #003067 !important;
     color: #FFF;
     opacity: .9;
 }
 
 .content-menu--side__link:hover{
-    background-color: #003268 !important;
+    background-color: #003067 !important;
     color: #FFF;
     opacity: .5;
 }
@@ -689,7 +714,7 @@ ul.tabs li a{
 }
 
 ul.tabs li.active{
-    background-color: #275381;
+    background-color: #084892;
 }
 
 ul.tabs li.active .b{
@@ -702,4 +727,12 @@ ul.tabs li.active .b img{
 
 ul.tabs:last-child{
     border-right: .1em #EFEEEE solid;
+}
+
+ul.tabs{
+    border: none;
+}
+
+ul{
+    list-style: none;
 }
