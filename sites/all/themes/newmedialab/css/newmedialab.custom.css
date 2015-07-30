@@ -630,6 +630,12 @@ li.leaf{
     padding-left: 1em;
 }
 
+    @media(max-width: 40em){
+        #class-content{
+            width: 100%;
+        }
+    }
+
 #page__focus{
     max-width: 60.625em;
     margin: 0 auto;
