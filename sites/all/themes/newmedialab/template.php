@@ -252,3 +252,9 @@ function newmedialab_form_alter(&$form, &$form_state, $form_id){
         $form['actions']['submit']['#value'] = t(html_entity_decode('&#x1f50d;')); // Change the text on the submit button
     }
 }
+
+function newmedialab_preprocess_page(&$variables){
+    if(drupal_is_front_page()){
+        $variables['title']="";
+    }
+}
