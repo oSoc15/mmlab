@@ -835,6 +835,7 @@ span.b, ul.tabs.primary li a{
 
 ul.primary.tabs li{
     border: .1em #CCC solid;
+    float: left;
 }
 
 ul.tabs.primary li.active a:hover, ul.tabs.secondary li.active a:hover {
@@ -843,6 +844,13 @@ ul.tabs.primary li.active a:hover, ul.tabs.secondary li.active a:hover {
 ul.tabs.primary li a:hover, ul.tabs.secondary li a:hover {
     color: #084892;
     text-decoration: underline;
+}
+
+ul.primary.tabs{
+    border: none;
+    margin-left: 0;
+    padding-left: 0;
+    overflow: auto;
 }
 
 /* ---- Pagination ---- */
