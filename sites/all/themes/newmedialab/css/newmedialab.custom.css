@@ -186,11 +186,6 @@ body {
     background: #003067;
 }
 
-.header__menu li.leaf:first-child a {
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
 @media (max-width: 768px){
 
 
@@ -894,7 +889,10 @@ ul.primary.tabs li:last-child{
 }
 
 .group-context {
+    display: inline-block;
+    width: 50%;
     vertical-align: top;
+    padding-left: .5em;
 }
 
 .group-context{
@@ -902,8 +900,8 @@ ul.primary.tabs li:last-child{
     border: .1em solid #ccc;
     padding: .5em;
     float: right;
-    width: calc(50% - 1.5em);
-    margin-left: 1.5em;
+    width: calc(50% - 1em);
+    margin-right: 1em;
 }
 
 .group-context .field{
@@ -959,7 +957,8 @@ ul.links.inline li.node-readmore{
 @media (max-width: 768px) {
     .header__logo p {
         position: relative;
-        left: -105px;
+        left: -100px;
+        background-image: url('../images/main/logo-small.jpg') !important;
     }
 
     .region-header {
