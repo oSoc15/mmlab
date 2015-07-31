@@ -1006,3 +1006,27 @@ ul.links.inline li.node-readmore{
         top: 70px;
     }
 }
+
+/* ---- Event page styling ---- */
+.group-event-content{
+    max-width:40%;
+    display:inline-block;
+    float:none;
+}
+
+.field-name-field-event-logo{
+    float: none !important;
+    margin-right:3em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.field-name-field-description{
+    margin-bottom:2em;
+}
+@media (max-width: 443px) {
+    .field-name-field-event-logo{
+        width: 100% !important;
+    }
+}
+
