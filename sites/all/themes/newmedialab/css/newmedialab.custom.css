@@ -1114,3 +1114,8 @@ div.node-biblio ul.links.inline li {
         width: 100% !important;
     }
 }
+
+/* ---- research page styling ---- */
+.field-name-field-rt-description ul{
+    list-style:initial;
+}
