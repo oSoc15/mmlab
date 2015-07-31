@@ -1109,7 +1109,7 @@ div.node-biblio ul.links.inline li {
     content: "--";
 }
 
-@media (max-width: 443px) {
+@media (max-width: 27.688em) {
     .field-name-field-event-logo{
         width: 100% !important;
     }
@@ -1120,7 +1120,15 @@ div.node-biblio ul.links.inline li {
     width: auto;
 }
 
-/* ---- research page styling ---- */
+/* ---- Research page theming ---- */
 .field-name-field-rt-description ul{
     list-style:initial;
 }
+
+/* ---- Responsiveness ---- */
+
+    @media (max-width: 40em) {
+        .group-left-side, .group-context {
+            width: 100%;
+        }
+    }
