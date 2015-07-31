@@ -869,8 +869,8 @@ ul.primary.tabs{
 
 /* ---- Projects detail pages ---- */
 
-.node-project .field-name-field-logo {
-    width: 30%;
+.group_left_side {
+    width: 50%;
     display: inline-block;
     vertical-align: top;
 }
@@ -882,6 +882,12 @@ ul.primary.tabs{
 
 .node-project .field-type-text-with-summary {
     display: inline-block;
-    width: 70%;
+    width: 50%;
     vertical-align: top;
+}
+
+/* ---- General changes to detail pages ---- */
+
+ul.links.inline li.node-readmore{
+    display: none;
 }
