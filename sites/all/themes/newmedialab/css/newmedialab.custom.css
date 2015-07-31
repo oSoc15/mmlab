@@ -1120,11 +1120,6 @@ div.node-biblio ul.links.inline li {
     width: auto;
 }
 
-/* ---- Research page theming ---- */
-.field-name-field-rt-description ul{
-    list-style:initial;
-}
-
 /* ---- Responsiveness ---- */
 
     @media (max-width: 40em) {
@@ -1132,3 +1127,23 @@ div.node-biblio ul.links.inline li {
             width: 100%;
         }
     }
+
+/* ---- research group styling ---- */
+
+.field-name-field-rt-description ul{
+    list-style:initial;
+}
+
+.node-research-group ul{
+    list-style:initial;
+}
+
+.field.field-name-field-rg-people div.field-label,
+#research-wrapper div.field-label{
+    margin-bottom:1em;
+    margin-top:1em;
+    border-top:1px solid grey;
+    padding-top:0.5em;
+}
+
+
