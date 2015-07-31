@@ -954,7 +954,7 @@ ul.links.inline li.node-readmore{
 }
 /* ---- Responsive menu ---- */
 
-@media (max-width: 768px) {
+@media (max-width: 48em) {
     .header__logo p {
         position: relative;
         left: -100px;
@@ -973,7 +973,9 @@ ul.links.inline li.node-readmore{
     #block-menu-menu-header-menu .content {
         position: relative;
     }
+}
 
+@media (max-width: 40em){
     #block-menu-menu-header-menu ul.menu {
         position: absolute;
         width: 300px;
