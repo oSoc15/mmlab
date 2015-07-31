@@ -820,7 +820,7 @@ ul.primary li a{
     padding: 0;
 }
 
-input#edit-submit.form-submit{
+#page__contents input#edit-submit.form-submit{
     border: none;
     background-color: #084892;
     color: #FFF;
