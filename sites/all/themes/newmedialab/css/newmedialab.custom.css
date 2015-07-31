@@ -802,6 +802,10 @@ ul.primary li.active a, ul.primary li a, ul.primary li a:hover{
     border: 0;
 }
 
+ul.tabs.primary li.active{
+    border-color: #084892 ;
+}
+
 ul.tabs.primary li.active a{
     color: #FFF;
 }
@@ -889,6 +893,29 @@ ul.primary.tabs li:last-child{
     display: inline-block;
     width: 50%;
     vertical-align: top;
+}
+
+.group-context{
+    display: table;
+    border: .1em solid #ccc;
+    padding: .5em;
+}
+
+.group-context .field{
+    display: table-row;
+    font-size: .8em;
+}
+
+.group-context .field-label, .group-context.field-items{
+    display: table-cell;
+}
+
+.group-context .field-label {
+    width: 6em;
+}
+
+.group-context .field-items {
+    width: calc(100% - 6em);
 }
 
 /* ---- General changes to detail pages ---- */
