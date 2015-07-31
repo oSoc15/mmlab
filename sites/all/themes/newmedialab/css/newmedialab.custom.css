@@ -930,7 +930,9 @@ ul.links.inline li.node-readmore{
 
 /* ---- User profile styling ---- */
 .user-picture{
-    float:left !important;
+    float:none !important;
+    display:inline-block;
+    vertical-align:top;
 }
 
 .field-name-field-first-name{
@@ -941,6 +943,15 @@ ul.links.inline li.node-readmore{
 .field-name-field-first-name,
 .field-name-field-last-name {
     font-weight: bold;
+}
+
+.group-user-content{
+    display:inline-block;
+    width:70%;
+}
+
+.profile h3{
+    border-bottom:none !important;
 }
 /* ---- Responsive menu ---- */
 
