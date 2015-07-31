@@ -904,7 +904,7 @@ ul.primary.tabs li:last-child{
     padding: .5em;
     float: right;
     width: calc(50% - 1.5em);
-    margin-right: 1.5em;
+    margin-left: 1.5em;
 }
 
 .group-context .field{
