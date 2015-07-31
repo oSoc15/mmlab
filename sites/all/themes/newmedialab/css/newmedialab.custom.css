@@ -537,17 +537,11 @@ li.leaf{
 }
 
 #iminds_logo{
-    content: url('../images/partner_logos/iminds.png');
     margin: 0 auto;
     height: 1.6em;
 }
 
-#elis_logo{
-    content: url('../images/partner_logos/elis.png');
-}
-
 #mmlabpartner_logo{
-    content: url('../images/partner_logos/mml.png');
     height: 1.6em;
 }
 
