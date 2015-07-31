@@ -850,3 +850,19 @@ ul.tabs.primary li a:hover, ul.tabs.secondary li a:hover {
 .item-list ul.pager{
     margin: 1em 0;
 }
+
+/* --- Bottom borders --- */
+
+.node-teaser {
+    border-bottom: .1em solid #ccc;
+    padding-bottom: 1em;
+}
+
+.view-content div.node-biblio {
+    border-bottom: .1em solid #758490;
+    padding-bottom: 1em;
+}
+
+.view-content h2 {
+    font-size: 1.1em;
+}
