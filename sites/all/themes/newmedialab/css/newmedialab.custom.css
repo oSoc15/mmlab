@@ -699,8 +699,8 @@ ul.tabs{
 }
 
 ul.tabs li{
-    border-right: none;
     border: .1em #CCC solid;
+    border-right: 0;
     padding: .5em 1em;
     display: inline-block;
 }
