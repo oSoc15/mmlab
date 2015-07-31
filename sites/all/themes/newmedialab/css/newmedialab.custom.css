@@ -761,7 +761,7 @@ tr.even, tr.odd{
 
 .team-list ul li {
     display: inline-block;
-    width: 33%;
+    width: 40%;
     margin-bottom: 2em;
     overflow: auto;
 }
@@ -937,14 +937,6 @@ ul.primary.tabs li:last-child{
     height: auto;
 }
 
-.group-context {
-    display: inline-block;
-    width: 50%;
-    vertical-align: top;
-    padding-left: .5em;
-    word-break: break-all;
-}
-
 .group-context{
     display: table;
     border: .1em solid #ccc;
@@ -952,6 +944,12 @@ ul.primary.tabs li:last-child{
     float: right;
     width: calc(50% - 1em);
     margin-right: 1em;
+    vertical-align: top;
+    word-break: break-all;
+}
+
+div.group-context:only-of-type {
+    float: none;
 }
 
 .group-context .field{
@@ -965,6 +963,8 @@ ul.primary.tabs li:last-child{
 
 .group-context .field-label {
     width: 6em;
+    padding-right: .5em;
+    word-break: break-word;
 }
 
 .group-context .field-items {
