@@ -820,9 +820,13 @@ ul.primary li a{
     padding: 0;
 }
 
-#edit-submit{
-    background-color: transparentx;
-    border: 0;
+input#edit-submit.form-submit{
+    border: none;
+    background-color: #084892;
+    color: #FFF;
+    padding: .2em .5em;
+    font-weight: bold;
+    font-size: .8em;
 }
 
 span.b, ul.tabs.primary li a{
