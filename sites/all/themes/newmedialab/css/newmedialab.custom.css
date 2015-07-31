@@ -595,9 +595,9 @@ li.leaf{
 }
 
 .content-menu--side__link.active, .content-menu--side__link.active:hover{
-    background-color: #003067 !important;
-    color: #FFF;
-    opacity: .9;
+    background-color: rgba(204, 204, 204, 0.5) !important;
+    opacity: 1;
+    color: #1D447A;
 }
 
 .content-menu--side__link:hover{
