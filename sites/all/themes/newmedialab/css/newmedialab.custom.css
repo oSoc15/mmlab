@@ -1006,3 +1006,36 @@ ul.links.inline li.node-readmore{
         top: 70px;
     }
 }
+
+/* ---- Biblio details | Appendix ---- */
+
+.group-biblio-context.field-group-div {
+    display: table;
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.group-biblio-context.field-group-div .field {
+    display: table-row;
+    background: transparent;
+    padding: 0.1em 0.6em;
+}
+
+.group-biblio-context.field-group-div .field .field-label {
+    display: table-cell;
+    padding: 0.4em 1em 0.4em 0;
+    vertical-align: top;
+    width: 6.188em;
+    font-weight: normal;
+    border-bottom: .1em solid #ccc;
+}
+
+.group-biblio-context.field-group-div .field .field-items {
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: .1em solid #ccc;
+}
+
+div.node-biblio ul.links.inline li {
+    padding: 0;
+}
