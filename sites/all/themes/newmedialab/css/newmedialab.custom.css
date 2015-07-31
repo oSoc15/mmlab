@@ -766,6 +766,10 @@ tr.even, tr.odd{
     overflow: auto;
 }
 
+.team-list ul li > * {
+    float: left;
+}
+
 .views-field-picture {
     margin-right: 1em;
     width: 100px;
@@ -796,9 +800,36 @@ tr.even, tr.odd{
     left: calc(50% - 64px / 2);
 }
 
+.views-field-name{
+    width: 50%;
+}
+.views-field-field-job-title{
+    width: 40%; /* should always be a little less wide when compared to the name of the person */
+}
+
 .views-field-name a.username {
     text-decoration: none;
     font-weight: 600;
+}
+
+/* ---- Team responsive ---- */
+
+@media (max-width: 60em) {
+    .team-list ul li {
+        display: inline-block;
+        width: 45%;
+        margin-bottom: 2em;
+        overflow: auto;
+    }
+    .team-list ul li > * {
+        float: none;
+    }
+    .views-field-name{
+        width: 100%;
+    }
+    .views-field-field-job-title{
+        width: 100%; /* should always be a little less wide when compared to the name of the person */
+    }
 }
 
 /* ---- Detail pages ---- */
@@ -1007,6 +1038,7 @@ ul.links.inline li.node-readmore{
     }
 }
 
+
 /* ---- Biblio details | Appendix ---- */
 
 .group-biblio-context.field-group-div {
@@ -1038,4 +1070,28 @@ ul.links.inline li.node-readmore{
 
 div.node-biblio ul.links.inline li {
     padding: 0;
+}
+
+/* ---- Event page styling ---- */
+
+.group-event-content{
+    max-width:40%;
+    display:inline-block;
+    float:none;
+}
+
+.field-name-field-event-logo{
+    float: none !important;
+    margin-right:3em;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.field-name-field-description{
+    margin-bottom:2em;
+}
+@media (max-width: 443px) {
+    .field-name-field-event-logo{
+        width: 100% !important;
+    }
 }
