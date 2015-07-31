@@ -825,11 +825,6 @@ span.b, ul.tabs.primary li a{
     color: #1D384C;
 }
 
-ul.primary.tabs li{
-    border: .1em #CCC solid;
-    float: left;
-}
-
 ul.tabs.primary li.active a:hover, ul.tabs.secondary li.active a:hover {
     color: #fff;
 }
@@ -843,6 +838,16 @@ ul.primary.tabs{
     margin-left: 0;
     padding-left: 0;
     overflow: auto;
+}
+
+ul.primary.tabs li{
+    border: .1em #CCC solid;
+    float: left;
+    border-right-width: 0;
+}
+
+ul.primary.tabs li:last-child{
+    border-right-width: .1em;
 }
 
 /* ---- Pagination ---- */
