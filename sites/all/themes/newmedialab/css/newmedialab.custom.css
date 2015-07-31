@@ -870,13 +870,18 @@ ul.primary.tabs{
 /* ---- Projects detail pages ---- */
 
 .node-project .field-name-field-logo {
-    width: 50%;
+    width: 30%;
     display: inline-block;
     vertical-align: top;
 }
 
+.node-project .field-name-field-logo img{
+    width: auto;
+    height: auto;
+}
+
 .node-project .field-type-text-with-summary {
     display: inline-block;
-    width: 50%;
+    width: 70%;
     vertical-align: top;
 }
