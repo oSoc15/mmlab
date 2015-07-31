@@ -893,6 +893,7 @@ ul.primary.tabs li:last-child{
     display: inline-block;
     width: 50%;
     vertical-align: top;
+    padding-left: .5em;
 }
 
 .group-context{
