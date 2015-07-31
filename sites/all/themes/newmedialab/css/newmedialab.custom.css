@@ -1066,6 +1066,7 @@ ul.links.inline li.node-readmore{
     display: table-cell;
     vertical-align: middle;
     border-bottom: .1em solid #ccc;
+    float: none;
 }
 
 div.node-biblio ul.links.inline li {
