@@ -1064,9 +1064,11 @@ ul.links.inline li.node-readmore{
 
 .group-biblio-context.field-group-div .field .field-items {
     display: table-cell;
-    vertical-align: middle;
+    vertical-align: top;
     border-bottom: .1em solid #ccc;
     float: none;
+    width: 100%;
+    padding-top: .5em;
 }
 
 div.node-biblio ul.links.inline li {
