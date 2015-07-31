@@ -891,3 +891,28 @@ ul.primary.tabs{
 ul.links.inline li.node-readmore{
     display: none;
 }
+
+/* ---- Responsive menu ---- */
+
+@media (max-width: 768px) {
+    .header__logo p{
+        position: relative;
+        left: -105px;
+    }
+    .region-header{
+        position: static;
+        float: left;
+    }
+    .block-search{
+        position: static;
+    }
+    #block-menu-menu-header-menu .content{
+        position: relative;
+    }
+    #block-menu-menu-header-menu ul.menu{
+        position: absolute;
+        width: 300px;
+        right: -225px;
+        top: 70px;
+    }
+}
