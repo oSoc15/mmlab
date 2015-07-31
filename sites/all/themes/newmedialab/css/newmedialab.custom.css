@@ -946,6 +946,10 @@ ul.links.inline li.node-readmore{
     display:inline-block;
     width:70%;
 }
+
+.profile h3{
+    border-bottom:none !important;
+}
 /* ---- Responsive menu ---- */
 
 @media (max-width: 768px) {
