@@ -802,6 +802,10 @@ ul.primary li.active a, ul.primary li a, ul.primary li a:hover{
     border: 0;
 }
 
+ul.tabs.primary li.active{
+    border-color: #084892 ;
+}
+
 ul.tabs.primary li.active a{
     color: #FFF;
 }
@@ -825,11 +829,6 @@ span.b, ul.tabs.primary li a{
     color: #1D384C;
 }
 
-ul.primary.tabs li{
-    border: .1em #CCC solid;
-    float: left;
-}
-
 ul.tabs.primary li.active a:hover, ul.tabs.secondary li.active a:hover {
     color: #fff;
 }
@@ -843,6 +842,16 @@ ul.primary.tabs{
     margin-left: 0;
     padding-left: 0;
     overflow: auto;
+}
+
+ul.primary.tabs li{
+    border: .1em #CCC solid;
+    float: left;
+    border-right-width: 0;
+}
+
+ul.primary.tabs li:last-child{
+    border-right-width: .1em;
 }
 
 /* ---- Pagination ---- */
@@ -884,6 +893,30 @@ ul.primary.tabs{
     display: inline-block;
     width: 50%;
     vertical-align: top;
+    padding-left: .5em;
+}
+
+.group-context{
+    display: table;
+    border: .1em solid #ccc;
+    padding: .5em;
+}
+
+.group-context .field{
+    display: table-row;
+    font-size: .8em;
+}
+
+.group-context .field-label, .group-context.field-items{
+    display: table-cell;
+}
+
+.group-context .field-label {
+    width: 6em;
+}
+
+.group-context .field-items {
+    width: calc(100% - 6em);
 }
 
 /* ---- General changes to detail pages ---- */
