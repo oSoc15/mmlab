@@ -650,7 +650,14 @@ li.leaf{
 
 .biblio-export{
     color: #1D384C;
- }
+}
+
+    @media (max-width: 40em){
+        .biblio-export{
+            text-align: left;
+            float: none;
+        }
+    }
 
 .biblio-alpha-line a{
     text-decoration: none;
@@ -720,6 +727,12 @@ ul.tabs{
     margin-left: 0;
     padding-left: 0;
 }
+
+    @media (max-width: 40em){
+        ul.secondary.tabs li{
+            padding: .5em;
+        }
+    }
 
 ul{
     list-style: none;
