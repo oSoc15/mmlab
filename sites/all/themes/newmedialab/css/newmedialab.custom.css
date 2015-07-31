@@ -186,6 +186,11 @@ body {
     background: #003067;
 }
 
+.header__menu li.leaf:first-child a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
 @media (max-width: 768px){
 
 
@@ -972,6 +977,11 @@ ul.links.inline li.node-readmore{
 
     #block-menu-menu-header-menu .content {
         position: relative;
+    }
+
+    #block-menu-menu-header-menu ul.menu{
+        position: relative;
+        top: 1.55em;
     }
 }
 
