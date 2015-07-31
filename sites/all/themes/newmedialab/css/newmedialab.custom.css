@@ -731,6 +731,7 @@ ul.tabs{
     @media (max-width: 40em){
         ul.secondary.tabs li{
             padding: .5em;
+            font-size: .8em;
         }
     }
 
