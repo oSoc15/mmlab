@@ -942,6 +942,7 @@ ul.primary.tabs li:last-child{
     width: 50%;
     vertical-align: top;
     padding-left: .5em;
+    word-break: break-all;
 }
 
 .group-context{
