@@ -216,8 +216,6 @@ li.leaf{
 .header__menu a, .header__menu a:visited, .header__menu a:active{
     color: #4C3705;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 0.7em;
 }
 
@@ -537,17 +535,11 @@ li.leaf{
 }
 
 #iminds_logo{
-    content: url('../images/partner_logos/iminds.png');
     margin: 0 auto;
     height: 1.6em;
 }
 
-#elis_logo{
-    content: url('../images/partner_logos/elis.png');
-}
-
 #mmlabpartner_logo{
-    content: url('../images/partner_logos/mml.png');
     height: 1.6em;
 }
 
@@ -873,4 +865,23 @@ ul.primary.tabs{
 
 .view-content h2 {
     font-size: 1.1em;
+}
+
+/* ---- Projects detail pages ---- */
+
+.node-project .field-name-field-logo {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-project .field-name-field-logo img{
+    width: auto;
+    height: auto;
+}
+
+.node-project .field-type-text-with-summary {
+    display: inline-block;
+    width: 70%;
+    vertical-align: top;
 }
