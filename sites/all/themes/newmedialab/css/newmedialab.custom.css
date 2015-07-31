@@ -1115,6 +1115,11 @@ div.node-biblio ul.links.inline li {
     }
 }
 
+.field-item.even img{
+    height: auto;
+    width: auto;
+}
+
 /* ---- research page styling ---- */
 .field-name-field-rt-description ul{
     list-style:initial;
