@@ -2,6 +2,7 @@
 
 function mmlab_user_breadcrumb_menu_breadcrumb_alter(&$active_trail, $item){
     $path = current_path();
+    $active_trail[0]['title'] = t('MMLab home');
     //only do it on the users pages
     if(preg_match('/user\/[0-9]+/i',$path)){
         $team = array(
