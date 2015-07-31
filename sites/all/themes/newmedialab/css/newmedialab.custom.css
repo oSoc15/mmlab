@@ -889,7 +889,7 @@ ul.primary.tabs li:last-child{
     height: auto;
 }
 
-.node-project .field-type-text-with-summary {
+.group-context {
     display: inline-block;
     width: 50%;
     vertical-align: top;
@@ -900,6 +900,9 @@ ul.primary.tabs li:last-child{
     display: table;
     border: .1em solid #ccc;
     padding: .5em;
+    float: right;
+    width: calc(50% - 1em);
+    margin-right: 1em;
 }
 
 .group-context .field{
