@@ -186,6 +186,11 @@ body {
     background: #003067;
 }
 
+.header__menu li.leaf:first-child a {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
 @media (max-width: 768px){
 
 
@@ -901,8 +906,8 @@ ul.primary.tabs li:last-child{
     border: .1em solid #ccc;
     padding: .5em;
     float: right;
-    width: calc(50% - 1em);
-    margin-right: 1em;
+    width: calc(50% - 1.5em);
+    margin-right: 1.5em;
 }
 
 .group-context .field{
