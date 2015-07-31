@@ -216,8 +216,6 @@ li.leaf{
 .header__menu a, .header__menu a:visited, .header__menu a:active{
     color: #4C3705;
     text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
     font-size: 0.7em;
 }
 
