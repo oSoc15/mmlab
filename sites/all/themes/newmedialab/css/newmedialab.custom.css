@@ -1072,7 +1072,7 @@ ul.links.inline li.node-readmore{
 }
 
 div.node-biblio ul.links.inline li {
-    padding: 0;
+    display: none;
 }
 
 /* ---- Event page styling ---- */
