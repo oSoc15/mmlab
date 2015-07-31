@@ -722,7 +722,7 @@ ul.tabs li.active .b img{
 }
 
 ul.tabs.secondary li:last-child{
-    border-right: .1em #EFEEEE solid;
+    border-right: .1em #ccc solid;
 }
 
 ul.tabs{
@@ -815,13 +815,14 @@ ul.primary li.active a, ul.primary li a, ul.primary li a:hover{
     border: 0;
 }
 
-ul.primary li.active a{
+ul.tabs.primary li.active a{
     color: #FFF;
 }
 
 ul.primary li a{
     margin-right: 0;
     color: #1D384C;
+    padding: 0;
 }
 
 #edit-submit{
