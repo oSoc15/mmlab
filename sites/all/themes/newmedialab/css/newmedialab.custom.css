@@ -866,3 +866,17 @@ ul.primary.tabs{
 .view-content h2 {
     font-size: 1.1em;
 }
+
+/* ---- Projects detail pages ---- */
+
+.node-project .field-name-field-logo {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.node-project .field-type-text-with-summary {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
