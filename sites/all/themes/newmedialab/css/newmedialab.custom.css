@@ -891,3 +891,18 @@ ul.primary.tabs{
 ul.links.inline li.node-readmore{
     display: none;
 }
+
+/* ---- User profile styling ---- */
+.user-picture{
+    float:left !important;
+}
+
+.field-name-field-first-name{
+    float:left;
+    margin-right: 3px;
+}
+
+.field-name-field-first-name,
+.field-name-field-last-name{
+    font-weight:bold;
+}
