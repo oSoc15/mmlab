@@ -837,6 +837,14 @@ ul.primary.tabs li{
     border: .1em #CCC solid;
 }
 
+ul.tabs.primary li.active a:hover, ul.tabs.secondary li.active a:hover {
+    color: #fff;
+}
+ul.tabs.primary li a:hover, ul.tabs.secondary li a:hover {
+    color: #084892;
+    text-decoration: underline;
+}
+
 /* ---- Pagination ---- */
 
 .item-list ul.pager{
