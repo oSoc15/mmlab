@@ -258,3 +258,7 @@ function newmedialab_preprocess_page(&$variables){
         $variables['title']="";
     }
 }
+
+function newmedialab_preprocess_search_result(&$variables) {
+  $variables['info'] = '';
+} 
