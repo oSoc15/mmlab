@@ -40,6 +40,14 @@
    */
   Drupal.behaviors.newMediaLabExampleBehavior = {
     attach: function (context, settings) {
+
+
+	$('.group_event_pub').accordion({collapsible:true});
+	$('.group_event_pub .field-group-format-title').text('Publications');
+	console.log($('.group_event_pub .view-content div').lengt);
+	if($('.group_event_pub .view-content div').length === 0){
+		$('.group_event_pub').hide();
+	}
       // By using the 'context' variable we make sure that our code only runs on
       // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
       // we don't run the same piece of code for an HTML snippet that we already
