@@ -42,12 +42,21 @@
     attach: function (context, settings) {
 
 
-	$('.group_event_pub').accordion({collapsible:true});
-	$('.group_event_pub .field-group-format-title').text('Publications');
-	console.log($('.group_event_pub .view-content div').lengt);
-	if($('.group_event_pub .view-content div').length === 0){
-		$('.group_event_pub').hide();
+	$('.group_event_pub, .group-topic-pub').accordion({collapsible:true, active:false});
+	$('.group_event_pub .field-group-format-title, .group-topic-pub .field-group-format-title').text('Publications');
+	if($('.group_event_pub .view-content div, .group-topic-pub .view-content div').length === 0){
+		$('.group_event_pub, .group-topic-pub').hide();
 	}
+
+
+	$('.group-topic-proj').accordion({collapsible: true, active: false});
+        $('.group-topic-proj .field-group-format-title').text('Projects');
+        console.log($('.group-topic-proj .view-content div').lengt);
+        if($('.group-topic-proj .view-content div').length === 0){
+                $('.group-topic-proj').hide();
+        }
+
+
       // By using the 'context' variable we make sure that our code only runs on
       // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
       // we don't run the same piece of code for an HTML snippet that we already
