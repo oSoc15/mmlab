@@ -30,7 +30,10 @@ function mmlabRdf_getRdf($path, $format = '')
         $format = $format == '' ? getFormat($path) : $format;
         if($format != null) {
             if (easyrdf()) {
-                $graph = new EasyRdf_Graph($uri);
+
+                $data = file_get_contents($uri);
+                $data = addMissingTags($data);
+                $graph = new EasyRdf_Graph($uri,$data);
                 $graph->load($uri, 'guess');
                 $content_type = EasyRdf_Format::getFormat($format);
                 header('Content-type :' . $content_type->getDefaultMimeType());
@@ -96,4 +99,13 @@ function doContentNegotiation($path){
             mmlabRdf_getRdf($path, $format);
         }
     }
+}
+
+//the biblio module doesn't tag abstracts so we're adding it manually here
+function addMissingTags($data){
+    preg_match('/Abstract<\/td><td><p>([a-zA-Z \.\,\-\—\(\)\;]*)<\/p>/',$data,$matches);
+    $content = trim(strip_tags($matches[0]));
+    $toInject = 'typeof="schema:Article foaf:Article" property="schema:Article" content="'.$content.'"';
+    $replacement = '<td class="biblio-row-title">Abstract</td><td><p ' . $toInject .' >';
+    return preg_replace("/\<td class=\"biblio\-row\-title\"\>Abstract\<\/td\>\<td\>\<p\>/i",$replacement,$data);
 }
