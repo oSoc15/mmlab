@@ -1096,22 +1096,27 @@ div.node-biblio ul.links.inline li {
     float:none;
 }
 
-.field-name-field-event-logo{
-    float: none !important;
-    margin-right:3em;
+.field-name-field-event-logo img{
+    margin-top: -2.5em;
+    float:right;
     display: inline-block;
-    vertical-align: top;
+    max-height:5em
 }
+
 
 .field-name-field-description{
     margin-bottom:2em;
 }
 
 @media (max-width: 27.688em) {
-    .field-name-field-event-logo{
-        width: 100% !important;
+    .field-name-field-event-logo img{
+        /*width: 100% !important;*/
+        float:none !important;
+        margin-top:0em;
+        margin-bottom:0em !important;
     }
 }
+
 
 .field-item.even img{
     height: auto;
