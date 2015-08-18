@@ -1097,20 +1097,6 @@ div.node-biblio ul.links.inline li {
     margin-bottom:2em;
 }
 
-.event_date{
-    overflow:auto;
-}
-.event_date .field-name-field-startdate{
-    float:left;
-}
-.event_date .field-name-field-enddate{
-    float:left;
-}
-
-.event_date .field-name-field-startdate span:after{
-    content: "--";
-}
-
 @media (max-width: 27.688em) {
     .field-name-field-event-logo{
         width: 100% !important;
