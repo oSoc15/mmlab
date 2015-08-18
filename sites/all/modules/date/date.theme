@@ -326,7 +326,7 @@ function theme_date_display_range($variables) {
   }
 
   // Wrap the result with the attributes.
-  return t('!start-date to !end-date', array(
+  return t('!start-date - !end-date', array(
     '!start-date' => $start_date,
     '!end-date' => $end_date,
   ));
