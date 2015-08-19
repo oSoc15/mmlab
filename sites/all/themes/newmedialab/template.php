@@ -251,7 +251,12 @@ function newmedialab_form_alter(&$form, &$form_state, $form_id){
     if ($form_id == 'search_block_form') {
         $form['actions']['submit']['#value'] = t(html_entity_decode('&#xf002;')); // Change the text on the submit button
     }
+
+    if($form_id == "user_login") {
+        $form['name']['#description'] = 'Enter your username';
+    }
 }
+
 
 function newmedialab_preprocess_page(&$variables){
     if(drupal_is_front_page()){
