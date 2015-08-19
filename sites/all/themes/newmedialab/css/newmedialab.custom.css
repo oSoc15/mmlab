@@ -1123,6 +1123,11 @@ div.node-biblio ul.links.inline li {
     width: auto;
 }
 
+/*add more whitespace*/
+.node-event .field-items{
+    margin-bottom:0.5em;
+}
+
 /* ---- Responsiveness ---- */
 
     @media (max-width: 40em) {
