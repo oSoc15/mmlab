@@ -1086,6 +1086,10 @@ div.node-biblio ul.links.inline li {
     display:none;
 }
 
+/* ---- Conferences and workshops styling ---- */
+#views-exposed-form-conferences-and-workshops-page .views-submit-button{
+    padding: 0!important;
+}
 
 
 /* ---- Event page styling ---- */
