@@ -926,6 +926,18 @@ ul.primary.tabs li:last-child{
     font-size: 1.1em;
 }
 
+/* ---- Projects overview page ---- */
+.view-projects .field-name-field-logo img{
+    float: right;
+    max-height: 3em;
+    margin-top: -2.6em;
+    margin-bottom:-1em;
+}
+
+.view-projects .field-item p{
+    padding-top:1em !important;
+}
+
 /* ---- Projects detail pages ---- */
 
 .group-left-side {
