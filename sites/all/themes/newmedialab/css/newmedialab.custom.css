@@ -968,7 +968,7 @@ div.group-context:only-of-type {
 
 .group-context .field{
     display: table-row;
-    font-size: .8em;
+    font-size: .9em;
 }
 
 .group-context .field-label, .group-context.field-items{
