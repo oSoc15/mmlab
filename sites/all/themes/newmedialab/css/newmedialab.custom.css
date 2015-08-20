@@ -997,7 +997,7 @@ ul.links.inline li.node-readmore{
 
 /* ---- User profile styling ---- */
 .user-picture{
-    float:none !important;
+    float:right;
     display:inline-block;
     vertical-align:top;
 }
