@@ -1020,6 +1020,12 @@ ul.links.inline li.node-readmore{
 .profile h3{
     border-bottom:none !important;
 }
+
+@media (max-width:720px){
+    .profile .user-picture{
+        float:left;
+    }
+}
 /* ---- Responsive menu ---- */
 
 @media (max-width: 48em) {
