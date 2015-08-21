@@ -1101,9 +1101,11 @@ div.node-biblio ul.links.inline li {
 }
 
 /* ---- biblio teaser hide title ---- */
+.view-user-publications .node-biblio,
 .view-publications-per-research-topic .node-biblio{
     margin-bottom: 1em;
 }
+.view-user-publications .node-biblio h2,
 .view-publications-per-research-topic .node-biblio h2{
     display:none;
 }
