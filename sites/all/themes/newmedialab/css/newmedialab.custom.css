@@ -1101,10 +1101,12 @@ div.node-biblio ul.links.inline li {
 }
 
 /* ---- biblio teaser hide title ---- */
+.view-publications-per-event .node-biblio,
 .view-user-publications .node-biblio,
 .view-publications-per-research-topic .node-biblio{
     margin-bottom: 1em;
 }
+.view-publications-per-event .node-biblio h2,
 .view-user-publications .node-biblio h2,
 .view-publications-per-research-topic .node-biblio h2{
     display:none;
