@@ -933,7 +933,10 @@ ul.primary.tabs li:last-child{
 /* ---- Projects overview page ---- */
 .view-projects .field-name-field-logo img{
     float: right;
+    min-height:3em;
     max-height: 3em;
+    min-width:10em;
+    max-width:15em;
     margin-top: -2.6em;
     margin-bottom:-1em;
 }
