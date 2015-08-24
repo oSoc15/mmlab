@@ -1115,8 +1115,15 @@ div.node-biblio ul.links.inline li {
 /* ---- Conferences and workshops styling ---- */
 #views-exposed-form-conferences-and-workshops-page .views-submit-button{
     padding: 0!important;
+    margin-top: 0.4em;
 }
 
+.views-widget-sort-by label,
+.views-widget-sort-order label{
+    float:left !important;
+    margin-right:0.5em;
+    margin-top:0.2em;
+}
 
 /* ---- Event page styling ---- */
 
