@@ -262,8 +262,6 @@ function newmedialab_preprocess_page(&$variables){
     if(drupal_is_front_page()){
         $variables['title']="";
     }
-    drupal_add_library('system', 'ui');
-    drupal_add_library('system', 'ui.accordion');
 }
 
 function newmedialab_preprocess_search_result(&$variables) {

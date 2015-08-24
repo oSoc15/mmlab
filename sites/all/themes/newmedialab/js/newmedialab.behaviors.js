@@ -40,6 +40,7 @@
    */
   Drupal.behaviors.newMediaLabExampleBehavior = {
     attach: function (context, settings) {
+<<<<<<< HEAD
 
 
 	$('.group_event_pub, .group-topic-pub').accordion({collapsible:true, active:false});
@@ -57,6 +58,8 @@
         }
 
 
+=======
+>>>>>>> parent of d8ad178... #98 events publications are now collapsible trough jquery ui accordion
       // By using the 'context' variable we make sure that our code only runs on
       // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
       // we don't run the same piece of code for an HTML snippet that we already
