@@ -734,10 +734,10 @@ ul.tabs{
             font-size: .8em;
         }
     }
-
-ul{
+/* Don't know why this is in here, but it f*cks up all other bullet lists */
+/*ul{
     list-style: none;
-}
+}*/
 
 .sf-menu li{
     float: none;
