@@ -1,0 +1,3 @@
+name = mmlabb user breadcrumb
+core = 7.x
+description = workaround to display custom breadcrumbs on the user profile pages, this is needed because the path breadcrumbs module lacks this functionality

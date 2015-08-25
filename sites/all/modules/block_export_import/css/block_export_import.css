@@ -1,0 +1,84 @@
+/**
+ * @file
+ * Back-end styling for the displaying all system specific blocks.
+ */
+.header {
+  background-color: #ddd;
+  padding: 2px;
+}
+.block_name {
+  background-color: #ddd;
+  padding: 5px 0px;
+  float: left;
+  width: 45%;
+}
+.export_type {
+  background-color: #ddd;
+  padding: 5px 0px;
+  float: left;
+  width: 45%;
+}
+.block_action {
+  background-color: #ddd;
+  padding: 5px 0px;
+  float: left;
+  width: 10%;
+}
+.odd {
+  background-color: #eee;
+  padding: 3px 0px 5px 0px;
+  border-bottom: 1px #ddd solid;
+}
+.odd .form-item {
+  display: inline;
+  margin: 3px 0px 2px 0px;
+}
+.even {
+  background-color: #fff;
+  padding: 3px 0px 5px 0px;
+  border-bottom: 1px #ddd solid;
+}
+.even .form-item {
+  display: inline;
+  margin: 0px;
+}
+.form-item.form-type-checkbox {
+  float: left;
+  width: 45%;
+}
+.form-item.form-type-radios .form-radios {
+  float: left;
+  width: 45%;
+}
+.form-item.form-type-item {
+  float: right;
+  width: 10%;
+  padding: 0px;
+  margin: 0px;
+}
+.export-block-submit {
+  padding: 20px 0px 5px 0px;
+}
+.import-block-submit {
+  padding: 20px 0px 5px 0px;
+}
+#edit-override-existing .form-item-override-existing {
+  display: inline;
+  width: 50px!important;
+}
+#edit-no-block.form-item.form-type-item {
+  float: left;
+  width: 100%;
+}
+#edit-override-existing {
+  width: 100%;
+}
+#edit-back {
+  width: 100%;
+}
+.header a {
+  font-size: 0.923em;
+}
+input.form-checkbox, input.form-radio {
+  margin: -1px 0px 0px 3px;
+}

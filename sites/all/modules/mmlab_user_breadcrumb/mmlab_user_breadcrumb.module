@@ -1,0 +1,16 @@
+<?php
+
+function mmlab_user_breadcrumb_menu_breadcrumb_alter(&$active_trail, $item){
+    $path = current_path();
+    //only do it on the users pages
+    if(preg_match('/user\/[0-9]+/i',$path)){
+        $team = array(
+            'title' => t("Team"),
+            'href' => '/team',
+            'link_path' => '/team',
+            'localized_options' => array(),
+            'type' => 0
+        );
+        $active_trail[count($active_trail) -1] = $team;
+    }
+}

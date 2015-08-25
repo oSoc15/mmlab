@@ -1,0 +1,111 @@
+<?php
+
+include_once DRUPAL_ROOT.'/sites/all/libraries/composer/autoload.php';
+/**
+ *
+ * Author: Dieter Beelaert
+ *
+ */
+
+/* Hook called on every request
+ * This will check if the user requests an rdf file, if so the module will kick in and try to get the right format
+ */
+function mmlabRdf_init(){
+    $path = parse_url(current_path());
+    $path = $path['path'];
+    if(preg_match('/\.ttl|\.jsonld|\.rdf|\.nt|\.n3/i',$path)){
+       mmlabRdf_getRdf($path);
+    }
+
+    if(contentNegotiationRequested()){
+        doContentNegotiation($path);
+    }
+}
+
+function mmlabRdf_getRdf($path, $format = '')
+{
+    if (!isset($_GET['requestedMyself'])) { //prevent infinite loop of requests
+        $suffix = explode('.', $path)[0];
+        $uri = 'http://' . $_SERVER['HTTP_HOST'] . base_path() . '?q=' . $suffix . '&requestedMyself=true';
+        $format = $format == '' ? getFormat($path) : $format;
+        if($format != null) {
+            if (easyrdf()) {
+
+                $data = file_get_contents($uri);
+                $data = addMissingTags($data);
+                $graph = new EasyRdf_Graph($uri,$data);
+                $graph->load($uri, 'guess');
+                $content_type = EasyRdf_Format::getFormat($format);
+                header('Content-type :' . $content_type->getDefaultMimeType());
+                print $graph->serialise($format);
+                //stop rendering html output
+                die;
+            } else {
+                drupal_set_message('easyRDF API is not installed correctly');
+            }
+        }
+    }
+}
+
+function getFormat($path, $value =''){
+    if($value == ''){
+        $split = explode('.',$path);
+        $value = $split[1];
+    }
+
+    switch($value){
+        case 'ttl':return 'turtle';
+        break;
+        case 'jsonld': return 'json';
+        break;
+        case 'rdf': return 'rdfxml';
+        break;
+        case 'nt': return 'ntriples';
+        break;
+        case 'n3': return 'n3';
+        break;
+        default: return null;
+        break;
+    }
+}
+
+function contentNegotiationRequested(){
+    $accept = getallheaders()['Accept'];
+    return preg_match('/rdf|n\-triples|turtle|n3|jsonld/i',$accept);
+}
+
+function doContentNegotiation($path){
+    $supported = array(
+        'html',
+        'application/rdf+xml',
+        'application/turtle',
+        'application/n-triples',
+        'application/n3',
+        'application/jsonld',
+        'text/rdf+xml',
+        'text/turtle',
+        'text/n3',
+        'text/jsonld',
+        'text/html'
+    );
+
+    $negotiator = new \Negotiation\FormatNegotiator();
+    $accept = $negotiator->getBest(getallheaders()['Accept'],$supported);
+    if($accept != null) {
+        $format = $accept->getValue();
+        $format = preg_replace('/application|\/|\+xml|text/i', '', $format);
+        $format = getFormat($path,$format);
+        if($format != 'html') {
+            mmlabRdf_getRdf($path, $format);
+        }
+    }
+}
+
+//the biblio module doesn't tag abstracts so we're adding it manually here
+function addMissingTags($data){
+    preg_match('/Abstract<\/td><td><p>([a-zA-Z \.\,\-\—\(\)\;]*)<\/p>/',$data,$matches);
+    $content = trim(strip_tags($matches[0]));
+    $toInject = 'typeof="schema:Article foaf:Article" property="schema:Article" content="'.$content.'"';
+    $replacement = '<td class="biblio-row-title">Abstract</td><td><p ' . $toInject .' >';
+    return preg_replace("/\<td class=\"biblio\-row\-title\"\>Abstract\<\/td\>\<td\>\<p\>/i",$replacement,$data);
+}
