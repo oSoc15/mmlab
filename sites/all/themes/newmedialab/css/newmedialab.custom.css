@@ -1128,7 +1128,7 @@ div.node-biblio ul.links.inline li {
     margin-top:0.2em;
 }
 
-/* ---- Event page styling ---- */
+/* ---- Event and project page styling ---- */
 
 .group-event-content{
     max-width:40%;
@@ -1136,17 +1136,20 @@ div.node-biblio ul.links.inline li {
     float:none;
 }
 
+.node-project .field-name-field-logo img,
 .field-name-field-event-logo img{
     margin-top: -2.5em;
     float:right;
     display: inline-block;
-    max-height:5em
+    max-height:5em;
+    max-width:10em;
 }
 
 
 .field-name-field-description{
     margin-bottom:2em;
 }
+
 
 @media (max-width: 27.688em) {
     .field-name-field-event-logo img{
@@ -1164,6 +1167,7 @@ div.node-biblio ul.links.inline li {
 }
 
 /*add more whitespace*/
+.node-project .field-items,
 .node-event .field-items{
     margin-bottom:0.5em;
 }
