@@ -696,6 +696,10 @@ li.leaf{
     font-weight: bold;
 }
 
+.item-list ul li {
+    list-style-type: none;
+}
+
 ul.tabs{
     border: none;
 }
