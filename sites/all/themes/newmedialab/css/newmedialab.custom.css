@@ -1043,7 +1043,7 @@ ul.links.inline li.node-readmore{
 @media (max-width: 48em) {
     .header__logo p {
         position: relative;
-        left: -100px;
+        left: -75px;
         background-image: url('../images/main/logo-small.jpg') !important;
     }
 
