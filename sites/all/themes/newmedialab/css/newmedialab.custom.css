@@ -955,7 +955,7 @@ ul.primary.tabs li:last-child{
     padding-top:1em !important;
 }
 
-.field-items .view-content {
+.projectpersons .view-content {
     display: flex;
     width: 45%;
     margin: 1em;
