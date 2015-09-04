@@ -1,5 +1,6 @@
 /**
 / CHANGES BY TEAM #oSoc15 - CHRISTOPHE LEROY
+/ Updated by Umut Saglam Sept. 2015
 */
 
 /**
@@ -952,6 +953,12 @@ ul.primary.tabs li:last-child{
 
 .view-projects .field-item p{
     padding-top:1em !important;
+}
+
+.field-items .view-content {
+    display: flex;
+    width: 45%;
+    margin: 1em;
 }
 
 /* ---- Projects detail pages ---- */
