@@ -16,9 +16,6 @@ function emailDisplayer_init(){
 	if($profile !== null) {
 		$mail = $profile->mail;
 		$existingUser = user_load($profile->uid);
-		$existingUser->field_display_email['und'][0]['value'] = $mail;
-
-		// save existing user
-		user_save((object) array('uid' => $existingUser->uid), (array) $existingUser);
+		$existingUser->field_email['und'][0]['email'] = $mail;
 	}
- }
+}
