@@ -950,6 +950,12 @@ ul.primary.tabs li:last-child{
     font-size: 1.1em;
 }
 
+@media (max-width:50em) {
+	.view-content h2 {
+		max-width: 50%;
+	}
+}
+
 /* ---- Projects overview page ---- */
 .view-projects .field-name-field-logo img{
     float: right;
