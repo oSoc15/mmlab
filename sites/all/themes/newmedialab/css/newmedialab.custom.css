@@ -197,7 +197,8 @@ body {
 
 
     .header__logo{
-        float: none;
+        float: left;
+		position: relative;
     }
 
     .header__menu{
@@ -206,6 +207,10 @@ body {
         width: 100%;
         display: block;
     }
+	
+	#block-search-form {
+		position: relative;
+	}
 }
 
 li.leaf{
