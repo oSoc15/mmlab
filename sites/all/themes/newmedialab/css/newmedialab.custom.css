@@ -623,7 +623,8 @@ li.leaf{
     @media(max-width: 40em){
         #class-content{
             max-width: 100%;
-        }
+			width: 92%
+		}
     }
 
 #page__focus{
