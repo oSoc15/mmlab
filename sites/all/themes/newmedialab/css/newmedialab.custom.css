@@ -29,6 +29,7 @@
 
 html{
     color: #1D384C;
+	height: 100%;
 }
 
 a{
@@ -49,6 +50,8 @@ body {
     margin: 0 auto;
     width: 100%;
     background-color: #FFF;
+	display: table;
+	height: 100%;
 }
 
 .l-content > h1{
@@ -463,6 +466,8 @@ li.leaf{
     background-color: #003067;
     margin: 0 auto;
     font-weight: lighter;
+	display: table-row;
+	height: 1px;
 }
 
 @media (max-width: 48em){
