@@ -748,12 +748,12 @@ ul.tabs{
     padding-left: 0;
 }
 
-    @media (max-width: 40em){
-        ul.secondary.tabs li{
-            padding: .5em;
-            font-size: .8em;
-        }
-    }
+@media (max-width: 40em){
+	ul.secondary.tabs li{
+		padding: .5em;
+		font-size: .8em;
+	}
+}
 /* Don't know why this is in here, but it f*cks up all other bullet lists */
 /*ul{
     list-style: none;
@@ -1138,6 +1138,7 @@ div.node-biblio ul.links.inline li {
 }
 
 /* ---- biblio teaser hide title ---- */
+/*
 .view-publications-per-event .node-biblio,
 .view-user-publications .node-biblio,
 .view-publications-per-research-topic .node-biblio{
@@ -1147,6 +1148,14 @@ div.node-biblio ul.links.inline li {
 .view-user-publications .node-biblio h2,
 .view-publications-per-research-topic .node-biblio h2{
     display:none;
+}
+*/
+.view-content .node-biblio .content {
+    padding-top: 1em;
+}
+
+.view-content .node-biblio h2 {
+    display: none;
 }
 
 /* ---- Conferences and workshops styling ---- */
