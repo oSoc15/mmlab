@@ -110,17 +110,22 @@ body {
     width: 40%;
     float: left;
     display: inline-block;
+	height: 7em;
 }
 
-.header__logo p{
+.header__logo p#middlepiece{
     margin: 0;
     text-align: center;
     position: relative;
     width: 367px;
-    background: url('../images/main/logo.jpg') no-repeat center center;
-    height: 120px;
+    background: url('../images/main/logo.svg') no-repeat center center;
+    background-size: 11em;
+    background-position-y: 1.85em;
+	height: 120px;
+	right: 14.5em;
 }
 
+/*
 .header__logo p:before{
     content: ' ';
     position: absolute;
@@ -130,12 +135,46 @@ body {
     height: 45px;
     background: #003167;
 }
+*/
 
-.header__logo p:after{
+.header__logo p#beforepiece{
+    content: ' ';
+    position: relative;
+    right: 15em;
+	top: -15px;
+	float:left;
+    width: 6.8em;
+    height: 120px;
+    background: url('../images/main/logoBefore.jpg');
+}
+
+.header__logo p#beforepiece:before{
+    content: ' ';
+    position: relative;
+    background: #003167;
+    float: left;
+    top: 1.55em;
+    width: 2999px;
+    height: 45.2px;
+    right: 187em;
+}
+
+.header__logo p#afterpiece{
+    content: ' ';
+    position: relative;
+    right: 4em;
+    bottom: 8.5em;
+    float: left;
+    width: 6.8em;
+    height: 120px;
+    background: url('../images/main/logoAfter.jpg');
+}
+
+.header__logo p#afterpiece:after{
     content: ' ';
     position: absolute;
     top: 25px;
-    left: 367px;
+    left: 95px;
     width: 2999px;
     height: 45px;
     background: #ffcd00;
@@ -193,13 +232,24 @@ body {
     font-weight: bold;
 }
 
+@media (max-width: 1440px){
+    .header__logo p#middlepiece{
+		right: 4.5em;
+	}
+	
+	.header__logo p#beforepiece {
+		right: 5.5em;
+	}
+	
+	.header__logo p#afterpiece {
+		right: -6.5em;
+	}
+}
+
 @media (max-width: 768px){
-
-
-    .header__logo{
-        float: left;
-		position: relative;
-    }
+    .header__logo p#middlepiece{
+		right: 4.5em;
+	}
 
     .header__menu{
         padding: 0 0.9375em;
@@ -1064,12 +1114,6 @@ ul.links.inline li.node-readmore{
 /* ---- Responsive menu ---- */
 
 @media (max-width: 48em) {
-    .header__logo p {
-        position: relative;
-        left: -75px;
-        background-image: url('../images/main/logo-small.jpg') !important;
-    }
-
     .region-header {
         position: static;
         float: left;
