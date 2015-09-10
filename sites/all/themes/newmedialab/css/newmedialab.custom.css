@@ -233,6 +233,7 @@ body {
 }
 
 @media (max-width: 1440px){
+	
     .header__logo p#middlepiece{
 		right: 4.5em;
 	}
@@ -242,15 +243,12 @@ body {
 	}
 	
 	.header__logo p#afterpiece {
-		right: -6.5em;
+		right: -12.5em;
+		float: none;
 	}
 }
 
 @media (max-width: 768px){
-    .header__logo p#middlepiece{
-		right: 4.5em;
-	}
-
     .header__menu{
         padding: 0 0.9375em;
         margin-top: 0px;
@@ -260,6 +258,7 @@ body {
 	
 	#block-search-form {
 		position: relative;
+		left: 3em;
 	}
 }
 
