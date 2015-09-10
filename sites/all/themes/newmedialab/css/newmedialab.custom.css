@@ -582,8 +582,7 @@ li.leaf{
 }
 
 #block-superfish-2{
-    padding: 0 0 2em 0;
-    border-right: .1em #CCD solid;
+    background-color: #003067;
 }
 
 .content-menu--side__item{
@@ -601,19 +600,18 @@ li.leaf{
     border: .1em solid transparent;
     font-weight: 600;
     text-decoration: none;
-    color: #003067;
+    color: white;
 }
 
 .content-menu--side__link.active, .content-menu--side__link.active:hover{
-    background-color: #003067 !important;
-    color: #FFF;
-    opacity: .9;
+    background-color: #ffcd00;
+    color: black;
 }
 
 .content-menu--side__link:hover{
-    background-color: rgba(204, 204, 204, 0.5) !important;
-    opacity: 1;
-    color: #1D447A;
+    background-color: #ffcd00;
+    opacity: 0.7;
+    color: black;
 }
 
 /*-------------*/
