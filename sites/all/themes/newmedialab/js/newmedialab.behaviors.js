@@ -58,7 +58,22 @@
         if($('.group-topic-proj .view-content div').length === 0){
                 $('.group-topic-proj').hide();
         }
-*/		
+*/	
+	/*
+	* Publication view 
+	*
+	*/
+	
+	// Hide the braces on display
+	var pubs = document.getElementsByClassName('biblio-title');
+	for (i = 0; i < pubs.length; i++) { 
+		var str = pubs[i].getElementsByTagName('a')[0].innerHTML;
+		var res = str.replace("{", "");
+		var res = res.replace("}", "");
+		pubs[i].getElementsByTagName('a')[0].innerHTML = res;
+	}
+	
+	
 	// Hide filters when there is no publication.
 	$pubitemsodd = document.querySelectorAll('.view-biblio-views .views-row-odd').length;
 	$pubitems = document.querySelectorAll('.view-biblio-views .views-row-even').length + $pubitemsodd;
