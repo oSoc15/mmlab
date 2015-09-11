@@ -1110,6 +1110,11 @@ ul.links.inline li.node-readmore{
     border-bottom:none !important;
 }
 
+.profile h2.group-subtitle.field-group-html-element {
+    font-weight: 400;
+    margin-top: -0.8em;
+}
+
 /* ---- Responsive menu ---- */
 
 @media (max-width: 48em) {
