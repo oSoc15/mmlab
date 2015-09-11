@@ -60,7 +60,9 @@
         }
 */		
 	// Hide filters when there is no publication.
-	$pubitems = document.querySelectorAll('.view-biblio-views .views-row-odd').length;
+	$pubitemsodd = document.querySelectorAll('.view-biblio-views .views-row-odd').length;
+	$pubitems = document.querySelectorAll('.view-biblio-views .views-row-even').length + $pubitemsodd;
+
 	if($pubitems < 2) {
 		 $('.view-filters').hide();
 	}
