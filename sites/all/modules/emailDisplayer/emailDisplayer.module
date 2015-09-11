@@ -1,0 +1,21 @@
+<?php
+
+include_once DRUPAL_ROOT.'/sites/all/libraries/composer/autoload.php';
+/**
+ *
+ * Author: Umut Saglam
+ *
+ */
+
+/* 
+ * This will display the email from hidden drupal field
+ */
+function emailDisplayer_init(){
+	$profile = menu_get_object('user');
+	$mail = '';
+	if($profile !== null) {
+		$mail = $profile->mail;
+		$existingUser = user_load($profile->uid);
+		$existingUser->field_email['und'][0]['email'] = $mail;
+	}
+}

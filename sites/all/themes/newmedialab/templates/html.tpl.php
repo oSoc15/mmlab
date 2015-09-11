@@ -57,7 +57,7 @@
   <?php print $head; ?>
   <title><?php print $head_title; ?></title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <?php print $styles; ?>
   <?php print $scripts; ?>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700italic,700,400italic,300,300italic' rel='stylesheet' type='text/css'>

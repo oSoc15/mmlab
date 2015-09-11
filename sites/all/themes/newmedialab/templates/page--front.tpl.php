@@ -75,7 +75,11 @@
         <div class="region region-header">
             <div id="block-block-5" class="header__logo">
                 <div class="content">
-                    <a href="/"><p></p></a>
+                    <a href="/">
+						<p id="beforepiece"></p>
+						<p id="middlepiece"></p>
+						<p id="afterpiece"></p>
+					</a>
                 </div>
             </div>
             <?php print render($page['header']); ?>
