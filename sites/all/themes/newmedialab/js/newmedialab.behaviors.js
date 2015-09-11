@@ -40,16 +40,16 @@
    */
   Drupal.behaviors.newMediaLabExampleBehavior = {
     attach: function (context, settings) {
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
-
+/*
 	$('.group_event_pub').accordion({collapsible:true});
 	$('.group_event_pub .field-group-format-title').text('Publications');
 	console.log($('.group_event_pub .view-content div').lengt);
 	if($('.group_event_pub .view-content div').length === 0){
 		$('.group_event_pub').hide();
 	}
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
 
 	$('.group-topic-proj').accordion({collapsible: true, active: false});
@@ -58,12 +58,16 @@
         if($('.group-topic-proj .view-content div').length === 0){
                 $('.group-topic-proj').hide();
         }
-
-
-=======
->>>>>>> parent of d8ad178... #98 events publications are now collapsible trough jquery ui accordion
-=======
->>>>>>> parent of 7406cfa... #98 topics publications and topics are now collapsible
+*/		
+	// Hide filters when there is no publication.
+	$pubitems = document.getElementsByClassName('views-row-odd').length;
+	if($pubitems < 1) {
+		 $('.view-filters').hide();
+	}
+//=======
+//>>>>>>> parent of d8ad178... #98 events publications are now collapsible trough jquery ui accordion
+//=======
+//>>>>>>> parent of 7406cfa... #98 topics publications and topics are now collapsible
       // By using the 'context' variable we make sure that our code only runs on
       // the relevant HTML. Furthermore, by using jQuery.once() we make sure that
       // we don't run the same piece of code for an HTML snippet that we already
