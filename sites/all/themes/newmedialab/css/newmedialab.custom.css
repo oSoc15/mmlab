@@ -884,6 +884,35 @@ tr.even, tr.odd{
     text-decoration: none;
     font-weight: 600;
 }
+/* ---- User field icons ---- */
+
+.field-name-field-email a:before {
+    font-family: FontAwesome;
+    content: '\f0e0';
+    padding-right: 0.5em;
+	color: #003067;
+}
+
+.field-name-field-phone .field-item:before {
+    font-family: FontAwesome;
+    content: '\f098';
+    padding-right: 0.5em;
+	color: #003067;
+}
+
+.field-name-field-twitter .field-item:before {
+    font-family: FontAwesome;
+    content: '\f081';
+    padding-right: 0.5em;
+	color: #003067;
+}
+
+.field-name-field-linkedin a:before {
+    font-family: FontAwesome;
+    content: '\f08c';
+    padding-right: 0.5em;
+    color: #003067;
+}
 
 /* ---- Team responsive ---- */
 
