@@ -67,7 +67,7 @@
 		 $('.view-filters').hide();
 		 // If there is only one Publication change title from Publications to Publication.
 		 if($pubitems == 1) {
-			$('.view-header').value = "Publication";
+			$('.view-header h3').text("Publication");
 		 }
 	}
 //=======
