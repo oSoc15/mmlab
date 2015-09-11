@@ -61,7 +61,7 @@
 */		
 	// Hide filters when there is no publication.
 	$pubitems = document.querySelectorAll('.view-biblio-views .views-row-odd').length;
-	if($pubitems < 1) {
+	if($pubitems < 2) {
 		 $('.view-filters').hide();
 	}
 //=======
