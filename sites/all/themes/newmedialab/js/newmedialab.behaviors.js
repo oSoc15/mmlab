@@ -75,10 +75,10 @@
 	
 	
 	// Hide filters when there is no publication.
-	if(pubs < 2) {
+	if(pubs.length < 2) {
 		 $('.view-filters').hide();
 		 // If there is only one Publication change title from Publications to Publication.
-		 if(pubs == 1) {
+		 if(pubs.length == 1) {
 			$('.view-header h3').text("Publication");
 		 }
 	}
