@@ -65,6 +65,10 @@
 
 	if($pubitems < 2) {
 		 $('.view-filters').hide();
+		 // If there is only one Publication change title from Publications to Publication.
+		 if($pubitems == 1) {
+			$('.view-header').value = "Publication";
+		 }
 	}
 //=======
 //>>>>>>> parent of d8ad178... #98 events publications are now collapsible trough jquery ui accordion
