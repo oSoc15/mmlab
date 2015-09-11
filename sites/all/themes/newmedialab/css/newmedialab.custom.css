@@ -1219,6 +1219,15 @@ div.node-biblio ul.links.inline li {
     margin-top:0.2em;
 }
 
+.groupShortLoc {
+    display: inline-flex;
+}
+
+.groupShortLoc .field-name-field-short-name {
+    font-weight: bold;
+    padding-right: 1em;
+}
+
 /* ---- Event and project page styling ---- */
 
 .group-event-content{
