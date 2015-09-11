@@ -63,9 +63,9 @@
 	* Publication view 
 	*
 	*/
+	var pubs = document.getElementsByClassName('biblio-title');
 	
 	// Hide the braces on display
-	var pubs = document.getElementsByClassName('biblio-title');
 	for (i = 0; i < pubs.length; i++) { 
 		var str = pubs[i].getElementsByTagName('a')[0].innerHTML;
 		var res = str.replace("{", "");
@@ -75,13 +75,10 @@
 	
 	
 	// Hide filters when there is no publication.
-	$pubitemsodd = document.querySelectorAll('.view-biblio-views .views-row-odd').length;
-	$pubitems = document.querySelectorAll('.view-biblio-views .views-row-even').length + $pubitemsodd;
-
-	if($pubitems < 2) {
+	if(pubs < 2) {
 		 $('.view-filters').hide();
 		 // If there is only one Publication change title from Publications to Publication.
-		 if($pubitems == 1) {
+		 if(pubs == 1) {
 			$('.view-header h3').text("Publication");
 		 }
 	}
