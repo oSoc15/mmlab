@@ -1340,6 +1340,10 @@ div.node-biblio ul.links.inline li {
 }
 
 /* ---- Our company page ---- */
+[placeholder] {
+    padding-left: 0.3em;
+}
+
 form#webform-client-form-82 {
     display: inline-block;
     width: 98%;
