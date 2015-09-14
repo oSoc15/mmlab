@@ -893,6 +893,13 @@ tr.even, tr.odd{
 	color: #003067;
 }
 
+.field-name-field-fax .field-item:before  {
+    font-family: FontAwesome;
+    content: '\f1ac';
+    padding-right: 0.5em;
+	color: #003067;
+}
+
 .field-name-field-phone .field-item:before {
     font-family: FontAwesome;
     content: '\f098';
@@ -1336,6 +1343,7 @@ div.node-biblio ul.links.inline li {
 form#webform-client-form-82 {
     display: inline-block;
     width: 98%;
+	padding-top: 2em;
 }
 
 .form-item, .form-actions {
