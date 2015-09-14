@@ -1332,3 +1332,31 @@ div.node-biblio ul.links.inline li {
     margin-bottom: 2em !important;
 }
 
+/* ---- Our company page ---- */
+form#webform-client-form-82 {
+    display: inline-block;
+    width: 98%;
+}
+
+.form-item, .form-actions {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    display: inline;
+}
+
+.form-item.webform-component input {
+    height: 2em;
+    width: 15em;
+    margin-right: 0.4em;
+    margin-bottom: 0.4em;
+}
+
+input.webform-submit.button-primary.form-submit {
+    float: right;
+    margin-top: 1em;
+    height: 2em;
+    background-color: #003067;
+    color: white;
+    border: none;
+}
+
