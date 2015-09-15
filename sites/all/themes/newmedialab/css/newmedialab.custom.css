@@ -1383,6 +1383,10 @@ input.webform-submit.button-primary.form-submit {
     position: relative;
 }
 
+input#edit-submitted-email {
+    width: 20.6em;
+}
+
 @media (max-width: 956px) {
 	.field.field-name-field-google-maps {
 		float: left;
