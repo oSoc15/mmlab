@@ -1386,6 +1386,7 @@ input.webform-submit.button-primary.form-submit {
 @media (max-width: 956px) {
 	.field.field-name-field-google-maps {
 		float: left;
+		padding-right: 1em;
 	}
 }
 
