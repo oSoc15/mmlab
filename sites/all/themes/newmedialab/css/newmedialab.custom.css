@@ -1346,7 +1346,7 @@ div.node-biblio ul.links.inline li {
 
 form#webform-client-form-82 {
     display: inline-block;
-    width: 50%;
+    width: 21em;
 	padding-top: 2em;
 }
 
@@ -1365,6 +1365,7 @@ form#webform-client-form-82 {
 
 .form-textarea-wrapper textarea {
 	width: 20.6em !important;
+	height: 16.5em
 }
 
 input.webform-submit.button-primary.form-submit {
@@ -1374,5 +1375,17 @@ input.webform-submit.button-primary.form-submit {
     background-color: #003067;
     color: white;
     border: none;
+}
+
+.field.field-name-field-google-maps {
+	padding-top: 2em;
+    float: right;
+    position: relative;
+}
+
+@media (max-width: 956px) {
+	.field.field-name-field-google-maps {
+		float: left;
+	}
 }
 
