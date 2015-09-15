@@ -1346,7 +1346,7 @@ div.node-biblio ul.links.inline li {
 
 form#webform-client-form-82 {
     display: inline-block;
-    width: 98%;
+    width: 50%;
 	padding-top: 2em;
 }
 
@@ -1358,13 +1358,17 @@ form#webform-client-form-82 {
 
 .form-item.webform-component input {
     height: 2em;
-    width: 15em;
+    width: 10em;
     margin-right: 0.4em;
     margin-bottom: 0.4em;
 }
 
+.form-textarea-wrapper textarea {
+	width: 20.6em !important;
+}
+
 input.webform-submit.button-primary.form-submit {
-    float: right;
+    margin-left: 13em;
     margin-top: 1em;
     height: 2em;
     background-color: #003067;
