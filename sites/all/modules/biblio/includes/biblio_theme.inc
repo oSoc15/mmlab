@@ -574,7 +574,7 @@ function theme_biblio_author_link($variables) {
   $uri = array_merge($uri, $options);
   if (!isset($uri['attributes'])) {
     $uri['attributes'] = array('rel' => 'nofollow');
-    $uri['attributes'] = array('typeof' => 'schema:Person sioc:Item foaf:Document foaf:Person'); 
+    $uri['attributes'] = array('typeof' => 'schema:Person schema:creator foaf:Person'); 
     //typeof="schema:Person sioc:Item foaf:Document foaf:Person"
   }
   $path = $uri['path'];

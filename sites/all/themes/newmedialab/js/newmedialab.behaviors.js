@@ -63,6 +63,8 @@
 	* Publication view 
 	*
 	*/	
+	/*
+	// Hide braces in publication titles
 	var pubs = $('.biblio-title');
 	// Replace on view page change
 	jQuery(document).ajaxComplete(function(){        
@@ -76,7 +78,9 @@
 			pubs[i].getElementsByTagName('a')[0].innerHTML = str;
 		}                                   
     });
+	*/
 	// Hide filters when there is no publication.
+	var pubs = $('.biblio-title');
 	if(pubs.length < 2) {
 		 $('.view-filters').hide();
 		 // If there is only one Publication change title from Publications to Publication.
