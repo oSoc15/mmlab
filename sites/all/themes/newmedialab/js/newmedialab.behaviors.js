@@ -62,18 +62,20 @@
 	/*
 	* Publication view 
 	*
-	*/
-	var pubs = document.getElementsByClassName('biblio-title');
-	
-	// Hide the braces on display
-	for (i = 0; i < pubs.length; i++) { 
-		var str = pubs[i].getElementsByTagName('a')[0].innerHTML;
-		var res = str.replace("{", "");
-		var res = res.replace("}", "");
-		pubs[i].getElementsByTagName('a')[0].innerHTML = res;
-	}
-	
-	
+	*/	
+	var pubs = $('.biblio-title');
+	// Replace on view page change
+	jQuery(document).ajaxComplete(function(){        
+        var pubs = $('.biblio-title');
+		var str = "";
+		// Hide the braces on display
+		for (i = 0; i < pubs.length; i++) { 
+			str = pubs[i].getElementsByTagName('a')[0].innerHTML;
+			str = str.replace("{", "");
+			str = str.replace("}", "");
+			pubs[i].getElementsByTagName('a')[0].innerHTML = str;
+		}                                   
+    });
 	// Hide filters when there is no publication.
 	if(pubs.length < 2) {
 		 $('.view-filters').hide();
@@ -82,6 +84,18 @@
 			$('.view-header h3').text("Publication");
 		 }
 	}
+	
+	
+	/*
+	* Twitter feeds 
+	*
+	*/
+	var twitter = document.getElementsByClassName('field-name-field-twitter').length;
+	// hide feeds block if no twitter account.
+	if (twitter < 1) {
+		$('#block-widgets-s-twitter-user-timeline-widget').hide();
+	}
+
 //=======
 //>>>>>>> parent of d8ad178... #98 events publications are now collapsible trough jquery ui accordion
 //=======
