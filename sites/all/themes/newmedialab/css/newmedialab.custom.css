@@ -24,6 +24,14 @@
 }
 
 /**
+ * Error block
+ */
+ .error {
+	 display: none;
+ }
+ 
+
+/**
  * Styles
  */
 
@@ -338,7 +346,7 @@ li.leaf{
 
 @media (max-width: 40em){
     .home__intro{
-        width: 100%;
+        width: 80%;
         position: initial;
     }
 }
@@ -843,10 +851,12 @@ tr.even, tr.odd{
 
 #block-system-main-menu li a{
 	color:white;
+	font-size: 0.95em;
 }
 
 #block-system-main-menu .views-field span a{
 	text-decoration: none; 
+	font-size: 0.85em;
 }
 
 #block-system-main-menu li.first.last.leaf.menu-views {
@@ -861,6 +871,7 @@ tr.even, tr.odd{
     margin-top: 0;
     width: 100%;
     padding: 2.2em 1em;
+	margin-right: -2em;
 }
 
 #block-system-main-menu ul.menu:after {
@@ -883,6 +894,7 @@ tr.even, tr.odd{
 
 #block-system-main-menu .view-header p a{
 	text-decoration: none; 
+	font-size: 0.85em;
 }
 
 #block-system-main-menu .view-header:hover {
@@ -890,10 +902,27 @@ tr.even, tr.odd{
 }
 
 @media(min-width: 40em){
-	div#block-system-main-menu li{
+	
+	#block-system-main-menu ul.menu {
+		margin-right: 0em;
+	}
+	
+	#block-system-main-menu li{
 		width: 33%;
 		float: left;
 		padding-right: 1em;
+	}
+	
+	#block-system-main-menu li a{
+		font-size: inherit;
+	}
+	
+	#block-system-main-menu .views-field span a {
+		font-size: inherit;
+	}
+	
+	#block-system-main-menu .view-header p a{
+		font-size: inherit;
 	}
  }
 
