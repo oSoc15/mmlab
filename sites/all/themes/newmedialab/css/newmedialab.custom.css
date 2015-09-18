@@ -881,6 +881,14 @@ tr.even, tr.odd{
     font-weight: bold;
 }
 
+#block-system-main-menu .view-header p a{
+	text-decoration: none; 
+}
+
+#block-system-main-menu .view-header:hover {
+    font-weight: bold;
+}
+
 @media(min-width: 40em){
 	div#block-system-main-menu li{
 		width: 33%;
