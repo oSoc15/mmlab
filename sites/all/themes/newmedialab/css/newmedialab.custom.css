@@ -1378,6 +1378,16 @@ div.node-biblio ul.links.inline li {
 
 /* ---- Event and project page styling ---- */
 
+#group-date {
+    display: flex;
+}
+
+#group-date .field-name-field-start-date span.date-display-single:after {
+    content: 'to';
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+}
+
 .group-event-content{
     max-width:40%;
     display:inline-block;
