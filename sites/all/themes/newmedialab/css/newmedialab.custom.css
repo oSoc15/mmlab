@@ -1134,6 +1134,7 @@ ul.primary.tabs li:last-child{
 .node-teaser {
     border-bottom: .1em solid #ccc;
     padding-bottom: 1em;
+	padding-top: 1em;
 }
 
 .view-content div.node-biblio {
