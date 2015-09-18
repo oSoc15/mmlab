@@ -95,6 +95,23 @@
 	if (twitter < 1) {
 		$('#block-widgets-s-twitter-user-timeline-widget').hide();
 	}
+	
+	/*
+	* About us: description link
+	*
+	*/
+	
+	var aboutpage = $('#node-82');
+	var routefield = $( ".field-group-format-title");
+	if (aboutpage.length >= 1) {
+		routefield.click(function() {
+			if (routefield[0].innerHTML == "Show route description") {
+				routefield.text("Hide route description");
+			} else {
+				routefield.text("Show route description");
+			}
+		});
+	}
 
 //=======
 //>>>>>>> parent of d8ad178... #98 events publications are now collapsible trough jquery ui accordion
